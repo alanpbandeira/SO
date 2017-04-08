@@ -1,41 +1,39 @@
 import time
 import threading
-import math
 
-count = 0
+item_count = 0
 buffer_size = 100
 buffer = []
 chand = threading.Condition()
 
 def producer(start_time):
-    global buffer, chand, count
+    global buffer, chand, item_count
 
     while True:
-        if len(buffer) == buffer_size:
+        if item_count == buffer_size:
             chand.acquire()
             chand.wait()
-        
-        if time.time() - start_time >= 1:
-            if math.floor(time.time() - start_time) % 10 == 0:
-                start_time = time.time()
-                print(1)
+
         buffer.append(1)
+        item_count += 1
         
-        if buffer:
+        if item_count == 1:
             chand.acquire()
             chand.notify()
 
-def consumer():
-    global buffer, chand
+def consumer(start_time):
+    global buffer, chand, item_count
 
     while True:
-        if not buffer:
+        if item_count == 0:
+            print("at consumer: " + str(time.time()- start_time))
             chand.acquire()
             chand.wait()
         
         buffer.pop()
+        item_count -= 1
 
-        if not buffer:
+        if item_count == buffer_size - 1:
             chand.acquire()
             chand.notify()
 
@@ -43,7 +41,7 @@ start = time.time()
 
 try:
     threading._start_new_thread(producer, (start, ))
-    threading._start_new_thread(consumer, ())
+    threading._start_new_thread(consumer, (start, ))
 except:
     print("Error, unable to start threads")
 
