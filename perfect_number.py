@@ -13,7 +13,6 @@ number = int(input("Enter candidate number:"))
 n_threads = int(input("Enter the number of working threads:"))
 
 checking = [1 for x in range(n_threads)]
-print(checking)
 
 def perfection_check():
     global factor_buffer, number, checking, checked, w_semaphore, perfect
