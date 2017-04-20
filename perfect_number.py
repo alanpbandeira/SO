@@ -1,5 +1,5 @@
 import threading
-from threading import Thread, BoundedSemaphore, Semaphore
+from threading import Thread, Semaphore
 import math
 
 factor_buffer = []
