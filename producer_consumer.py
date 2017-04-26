@@ -1,12 +1,22 @@
 import time
 import threading
 
+# Número de elementos no buffer
+# Tamanho máximo do buffer
+# Buffer de elementos
 item_count = 0
 buffer_size = 100
 buffer = []
+
+# Objeto que implementa trava para condição de corrida
 chand = threading.Condition()
 
+
 def producer(start_time):
+    """
+    Função que implementa a thread produtor.
+    """
+    
     global buffer, chand, item_count
 
     while True:
@@ -22,6 +32,9 @@ def producer(start_time):
             chand.notify()
 
 def consumer(start_time):
+    """
+    Função que implementa a thread consumidor.
+    """
     global buffer, chand, item_count
 
     while True:
@@ -37,13 +50,16 @@ def consumer(start_time):
             chand.acquire()
             chand.notify()
 
+# Armazena o tempo de início.
 start = time.time()
 
+# Inicializa as threads de produtor e consumidor.
 try:
     threading._start_new_thread(producer, (start, ))
     threading._start_new_thread(consumer, (start, ))
 except:
     print("Error, unable to start threads")
 
-while 1:
+# Loop infinito para execução das threads.
+while True:
     pass

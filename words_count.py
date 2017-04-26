@@ -83,4 +83,4 @@ for word in text:
             words_total[word] += acc.get(word, 0)
 
 # Imprime a ocorrência de uma dada palavra
-print(words_total["dolor"])
+print(words_total["justo"])
