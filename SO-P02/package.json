@@ -1,0 +1,14 @@
+{
+  "name": "so-p02",
+  "version": "0.1.0",
+  "description": "App to search files occurrence that have a specific string in it's name, in the file system.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Alan Bandeira",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^1.6.10"
+  }
+}
