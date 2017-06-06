@@ -16,15 +16,23 @@ function createWindow(){
      slashes: true
    }));
 
-   win.webContents.openDevTools();
+   // win.webContents.openDevTools();
 
    win.on('close', () => {
      win = null;
    })
+
+   // if (win.File && win.FileReader && win.FileList && win.Blob) {
+   //     // Great success! All the File APIs are supported.
+   // } else {
+   //     app.alert('The File APIs are not fully supported in this browser.');
+   // }
+
 }
 
 // Run create window
 app.on('ready', createWindow);
+
 
 // Quit when all windows are closed
 app.on('window-all-closed', () => {

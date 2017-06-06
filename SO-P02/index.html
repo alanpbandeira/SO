@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>DocSearchApp</title>
-    <link rel="stylesheet" href="http://bootswatch.com/cerulean/bootstrap.min.css">
-  </head>
-  <body>
-    <div class="container">
-        <h2>My app</h2>
-    </div>
-  </body>
-  <script>
+    <head>
+        <meta charset="utf-8">
+        <title>DocSearchApp</title>
+        <link rel="stylesheet" href="http://bootswatch.com/cerulean/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h2>File System Search</h2>
+        </div>
+        <div class="container">
+            <form class="form-inline">
+              <div class="form-group">
+                <label for="exampleInputName2">Search String</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+              </div>
+              <button type="submit" class="btn btn-default">Search</button>
+            </form>
+        </div>
+
+        <div id="holder">
+            Drag your file here
+        </div>
+    </body>
+
+    <script>
         require('./renderer.js');
-  </script>
+    </script>
+    <script>
+      const holder = document.getElementById('holder')
+      holder.ondragover = () => {
+        return false;
+      }
+      holder.ondragleave = holder.ondragend = () => {
+        return false;
+      }
+      holder.ondrop = (e) => {
+        e.preventDefault()
+        for (let f of e.dataTransfer.files) {
+          console.log('File(s) you dragged here: ', f.path)
+        }
+        return false;
+      }
+    </script>
 </html>
