@@ -1,0 +1,66 @@
+execve("/usr/bin/mkdir", ["mkdir"], [/* 58 vars */]) = 0
+brk(NULL)                               = 0x6e8000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=226853, ...}) = 0
+mmap(NULL, 226853, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f75566a9000
+close(3)                                = 0
+open("/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\6\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1977568, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f75566a7000
+mmap(NULL, 3815728, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f755611b000
+mprotect(0x7f75562b6000, 2093056, PROT_NONE) = 0
+mmap(0x7f75564b5000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19a000) = 0x7f75564b5000
+mmap(0x7f75564bb000, 14640, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f75564bb000
+close(3)                                = 0
+arch_prctl(ARCH_SET_FS, 0x7f75566a84c0) = 0
+mprotect(0x7f75564b5000, 16384, PROT_READ) = 0
+mprotect(0x60b000, 4096, PROT_READ)     = 0
+mprotect(0x7f75566e1000, 4096, PROT_READ) = 0
+munmap(0x7f75566a9000, 226853)          = 0
+brk(NULL)                               = 0x6e8000
+brk(0x709000)                           = 0x709000
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1674704, ...}) = 0
+mmap(NULL, 1674704, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f755650e000
+close(3)                                = 0
+open("/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=2997, ...}) = 0
+read(3, "# Locale name alias data base.\n#"..., 4096) = 2997
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+open("/usr/share/locale/pt_BR.UTF-8/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/pt_BR.utf8/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/pt_BR/LC_MESSAGES/coreutils.mo", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=365325, ...}) = 0
+mmap(NULL, 365325, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f75560c1000
+close(3)                                = 0
+open("/usr/lib/gconv/gconv-modules.cache", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/lib/gconv/gconv-modules", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=56095, ...}) = 0
+read(3, "# GNU libc iconv configuration.\n"..., 4096) = 4096
+read(3, "1002//\tJUS_I.B1.002//\nmodule\tJUS"..., 4096) = 4096
+read(3, "ISO-IR-110//\t\tISO-8859-4//\nalias"..., 4096) = 4096
+read(3, "\t\tISO-8859-14//\nalias\tISO_8859-1"..., 4096) = 4096
+read(3, "IC-ES//\nalias\tEBCDICES//\t\tEBCDIC"..., 4096) = 4096
+read(3, "DIC-CP-ES//\t\tIBM284//\nalias\tCSIB"..., 4096) = 4096
+read(3, "//\nalias\tCSIBM864//\t\tIBM864//\nal"..., 4096) = 4096
+read(3, "BM939//\nmodule\tIBM939//\t\tINTERNA"..., 4096) = 4096
+read(3, "EUC-CN//\nalias\tCN-GB//\t\t\tEUC-CN/"..., 4096) = 4096
+read(3, "T//\nmodule\tISO-2022-CN-EXT//\tINT"..., 4096) = 4096
+read(3, "//\t\tISO_5428//\nalias\tISO_5428:19"..., 4096) = 4096
+brk(0x72a000)                           = 0x72a000
+read(3, "CII-8\t1\n\n#\tfrom\t\t\tto\t\t\tmodule\t\tc"..., 4096) = 4096
+read(3, "\tfrom\t\t\tto\t\t\tmodule\t\tcost\nalias\t"..., 4096) = 4096
+read(3, "712//\t\tINTERNAL\t\tIBM12712\t\t1\nmod"..., 4096) = 2847
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+write(2, "mkdir: ", 7)                  = 7
+write(2, "falta operando", 14)          = 14
+write(2, "\n", 1)                       = 1
+write(2, "Tente \"mkdir --help\" para mais i"..., 46) = 46
+close(1)                                = 0
+close(2)                                = 0
+exit_group(1)                           = ?
++++ exited with 1 +++
