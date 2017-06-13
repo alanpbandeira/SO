@@ -33,6 +33,16 @@ def log_import():
     if input():
         menu()
 
+def calc_score():
+    clear_ui()
+    test_file = input("Enter the test file name:\n")
+    pass
+
+def save_data(gram_size):
+    
+
+
+
 def menu():
     global my_app
 
@@ -45,9 +55,10 @@ def menu():
     -> Select an Option:
         1. Import Syscall Log
         2. Consult DataBase
-        3. Calculate N-Gram Score
-        4. Clear Data
-        5. Exit
+        3. Output n-gram Data
+        4. Calculate N-Gram Score
+        5. Clear Data
+        6. Exit
 
     """
     )
@@ -64,5 +75,7 @@ def menu():
         pass
     elif opt == '5':
         pass
+    elif opt == '6':
+        return
     else:
         menu()

@@ -25,7 +25,7 @@ class App(object):
             grams = fo.ngram_sequence(call_sequence, window)
 
             for gram in grams:
-                self.data_base[gram[0]].put(gram, True)
+                self.data_base[gram[0]].put(gram, len(gram))
 
         print ("DB filled.")
 
