@@ -1,3 +1,4 @@
+import queue
 from .node import Node
 
 class TST(object):
@@ -50,3 +51,25 @@ class TST(object):
             return self.get_item(node.mid_node, key, index+1)
         else:
             return node
+
+    def traverse_util(self, root, c_buffer, depth, matches=None):
+        if root is not None:
+            self.traverse_util(root.left_node, c_buffer, depth)
+            c_buffer[depth] = str(root.character)
+            # c_buffer.append(str(root.character))
+
+            if matches is None:
+                if not any([root.left_node, root.right_node, root.mid_node]):
+                    print("".join(c_buffer))
+            else:
+                if root.value:
+                    print("".join(c_buffer))
+                    # c_buffer = []
+
+            self.traverse_util(root.mid_node, c_buffer, depth+1)
+            self.traverse_util(root.right_node, c_buffer, depth)
+
+    def traverse(self):
+        buf = [''] * 50
+        # buf = []
+        self.traverse_util(self.root, buf, 0)

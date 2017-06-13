@@ -39,9 +39,8 @@ def calc_score():
     pass
 
 def save_data(gram_size):
-    
-
-
+    grams = []
+    pass
 
 def menu():
     global my_app
@@ -70,11 +69,11 @@ def menu():
     elif opt == '2':
         query_gram()
     elif opt == '3':
-        pass
+        save_data()
     elif opt == '4':
-        pass
+        calc_score()
     elif opt == '5':
-        pass
+        my_app = None
     elif opt == '6':
         return
     else:
