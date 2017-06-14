@@ -1,4 +1,5 @@
 from App.app import App
+from App import file_operations as fo
 import os
 
 
@@ -8,39 +9,72 @@ def clear_ui():
     try:
         os.system('clear')
     except:
-        pass
-    else:
         os.system('cls')
 
 def query_gram():
     clear_ui()
+
+    print("Enter gram:")
     gram = input("\n")
-    pass
+
+    if my_app.data_search(gram):
+        print("Gram sequence found in data_base")
+    else:
+        print("Gram sequence not found in data_base")
+
+    print("\nPress enter to continue.")
+    while input() is not "":
+        continue
+    menu()
 
 def init():
     log_import()
     my_app.run()
 
+    print("\nPress enter to continue")
+    while input() is not "":
+        continue
+    menu()
+
 def log_import():
     global my_app
 
     clear_ui()
-    file_name = input("Log File:\n")
-    max_grams = input("Maximum Gram Size:\n")
+    file_name = input("Log File: ")
+    max_grams = int(input("Maximum Gram Size: "))
     my_app = App(file_name, max_grams)
 
-    print("Log import with success.\nPress any button to return")
-    if input():
-        menu()
+    print("Log imported with success")
 
 def calc_score():
     clear_ui()
     test_file = input("Enter the test file name:\n")
-    pass
+    base_file = input("Enter the base file name:\n")
+    print("Similarity Score: ", fo.ngram_score(base_file, test_file))
 
-def save_data(gram_size):
+    print("\nPress any button to return")
+    if input():
+        menu()
+
+def save_data():
+    clear_ui()
+    gram_size = input("Enter gram_size: ")
+
     grams = []
-    pass
+    for tree in my_app.data_base.values():
+        tree.traverse(gram_size, my_app.max_gram, grams)
+
+    file_name = "data/" + my_app.descriptor.idx_file[:idx_file.rfind('.')] + \
+                "_logbase_" + str(gram_size) + ".gram"
+
+    with open(file_name, 'w') as fhand:
+        for item in grams:
+            fhand.write(item)
+
+    print("Data save with success.\nPress enter to continue.")
+    while input() is not "":
+        continue
+    menu()
 
 def menu():
     global my_app
@@ -48,8 +82,7 @@ def menu():
     clear_ui()
 
     print(
-    """
-    | ** Syscall Analyser ** |
+    """| ** Syscall Analyser ** |
 
     -> Select an Option:
         1. Import Syscall Log
@@ -58,7 +91,6 @@ def menu():
         4. Calculate N-Gram Score
         5. Clear Data
         6. Exit
-
     """
     )
 
@@ -75,6 +107,9 @@ def menu():
     elif opt == '5':
         my_app = None
     elif opt == '6':
+        clear_ui()
         return
     else:
         menu()
+
+menu()

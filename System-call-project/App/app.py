@@ -1,5 +1,5 @@
-from TernarySearchTree.ternary_search_tree import TST
-from SysCallProcessing.sc_descriptor import SCDescriptor
+from .TernarySearchTree.ternary_search_tree import TST
+from .SysCallProcessing.sc_descriptor import SCDescriptor
 from . import file_operations as fo
 
 class App(object):
@@ -34,7 +34,7 @@ class App(object):
         Initialize the data_base with a a TST for each possible
         one_gram sequence.
         """
-        for x in range(max([int(i) for i in call_sequence]) + 1):
+        for x in range(max([int(i) for i in call_ones]) + 1):
             if not self.data_base.keys() or x not in self.data_base.keys():
                 self.data_base[str(x)] = TST()
                 self.data_base[str(x)].put(str(x), True)
@@ -47,7 +47,7 @@ class App(object):
         """
         pass
 
-    def data_search(self, key=None):
+    def data_search(self, key):
         """
         Finds a provided key in the data_base, if no key is provided the
         complete data_base is returned

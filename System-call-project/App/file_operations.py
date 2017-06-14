@@ -56,7 +56,7 @@ def syscall_id(syscall_file):
             else:
                 id_calls[call] = max(id_calls.values()) + 1
 
-        with open(idx_file + '.idx', 'w') as output:
+        with open(idx_file, 'w') as output:
             for idx in range(len(calls) - 1):
                 output.write(
                     calls[idx] + "," + str(id_calls[calls[idx]]) + "\n")
