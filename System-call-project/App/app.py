@@ -9,13 +9,14 @@ class App(object):
         self.max_gram = max_gram
         self.descriptor = SCDescriptor(sc_log)
         self.data_base = {}
+        self.scores = None
 
     def run(self):
         """docstring"""
         self.descriptor.run()
         call_ids = fo.extract_calls_id(self.descriptor.idx_file)
         self.fill_data_base(call_ids)
-
+        self.scores = dict.fromkeys(list(range(1, self.max_gram+1)))
 
     def fill_data_base(self, call_sequence):
         """docstring"""
@@ -54,6 +55,22 @@ class App(object):
         """
         return self.data_base[key[0]].get(key)
 
-    def data_view(self):
+    def gram_similarity(self, test_file):
         """docstring"""
-        pass
+
+        with open(test_file) as f:
+            test = f.read().split()
+
+            misses = 0
+            upper_b = len(test)
+
+            for gram in test:
+                if self.data_base[gram[0]].get(gram):
+                    continue
+                else:
+                    misses += 1
+
+            score = misses / upper_b
+            perc = int(score * 100)
+
+            self.scores[len(gram[0])] = (score, perc)

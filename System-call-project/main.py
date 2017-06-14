@@ -11,6 +11,17 @@ def clear_ui():
     except:
         os.system('cls')
 
+def reformat():
+    clear_ui()
+
+    f = input("Enter file name: ")
+    fo.reformat_input(f)
+
+    print("\nPress any button to return")
+    while input() is not "":
+        continue
+    menu()
+
 def query_gram():
     clear_ui()
 
@@ -49,7 +60,7 @@ def log_import():
 def calc_score():
     clear_ui()
     test_file = input("Enter the test file name:\n")
-    base_file = input("Enter the base file name:\n")
+    my_app.gram_similarity(test_file)
     print("Similarity Score: ", fo.ngram_score(base_file, test_file))
 
     print("\nPress any button to return")
@@ -58,18 +69,20 @@ def calc_score():
 
 def save_data():
     clear_ui()
-    gram_size = input("Enter gram_size: ")
+    gram_size = int(input("Enter gram_size: "))
+    idx_file = my_app.descriptor.idx_file
+    idx_file = idx_file[:idx_file.rfind('.')]
 
     grams = []
     for tree in my_app.data_base.values():
-        tree.traverse(gram_size, my_app.max_gram, grams)
+        grams += tree.traverse(gram_size-1, my_app.max_gram)
 
-    file_name = "data/" + my_app.descriptor.idx_file[:idx_file.rfind('.')] + \
-                "_logbase_" + str(gram_size) + ".gram"
+    file_name = idx_file + "_logbase_" + str(gram_size) + ".gram"
 
-    with open(file_name, 'w') as fhand:
-        for item in grams:
-            fhand.write(item)
+    fo.output_gram(file_name, grams)
+    # with open(file_name, 'w') as fhand:
+    #     for item in grams:
+    #         fhand.write(item)
 
     print("Data save with success.\nPress enter to continue.")
     while input() is not "":
@@ -90,7 +103,8 @@ def menu():
         3. Output n-gram Data
         4. Calculate N-Gram Score
         5. Clear Data
-        6. Exit
+        6. Inport ".strace" File
+        7. Exit
     """
     )
 
@@ -107,6 +121,8 @@ def menu():
     elif opt == '5':
         my_app = None
     elif opt == '6':
+        reformat()
+    elif opt == '7':
         clear_ui()
         return
     else:

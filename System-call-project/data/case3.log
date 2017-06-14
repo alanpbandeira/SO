@@ -1,0 +1,153 @@
+ execve("/usr/sbin/traceroute", ["/usr/sbin/traceroute", "www.guneskayacik.ca"], [/* 19 vars */]) = 0
+ brk(0)        = 0x804cedc <0.000011>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40014000 <0.000014>
+ open("/etc/ld.so.preload", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000027>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000017>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000008>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000013>
+ close(4)      = 0 <0.000007>
+ open("/lib/libc.so.6", O_RDONLY) = 4 <0.000023>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=4101324, ...}) = 0 <0.000007>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\210\212"..., 4096) = 4096 <0.000036>
+ old_mmap(NULL, 1001564, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40018000 <0.000013>
+ mprotect(0x40105000, 30812, PROT_NONE) = 0 <0.000012>
+ old_mmap(0x40105000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0xec000) = 0x40105000 <0.000014>
+ old_mmap(0x40109000, 14428, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x40109000 <0.000010>
+ close(4)      = 0 <0.000006>
+ mprotect(0x40018000, 970752, PROT_READ|PROT_WRITE) = 0 <0.000015>
+ mprotect(0x40018000, 970752, PROT_READ|PROT_EXEC) = 0 <0.000023>
+ munmap(0x40015000, 12210) = 0 <0.000018>
+ personality(PER_LINUX) = 0 <0.000006>
+ getpid()      = 738 <0.000007>
+ brk(0)        = 0x804cedc <0.000006>
+ brk(0x804cefc) = 0x804cefc <0.000006>
+ brk(0x804d000) = 0x804d000 <0.000006>
+ brk(0x804e000) = 0x804e000 <0.000015>
+ gettimeofday({1142548324, 469561}, NULL) = 0 <0.000007>
+ getpid()      = 738 <0.000006>
+ open("/etc/resolv.conf", O_RDONLY) = 4 <0.000032>
+ fstat64(0x4, 0xbffff460) = -1 ENOSYS (Function not implemented) <0.000007>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=48, ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000017>
+ read(4, "search cs.Dal.Ca Dal.Ca\nnameserv"..., 4096) = 48 <0.000033>
+ read(4, "", 4096) = 0 <0.000007>
+ close(4)      = 0 <0.000011>
+ munmap(0x40015000, 4096) = 0 <0.000012>
+ socket(PF_UNIX, SOCK_STREAM, 0) = 4 <0.000031>
+ connect(4, {sin_family=AF_UNIX, path="                                                                                       /var/run/.nscd_socket"}, 110) = -1 ECONNREFUSED (Connection refused) <0.000026>
+ close(4)      = 0 <0.000035>
+ open("/etc/nsswitch.conf", O_RDONLY) = 4 <0.000050>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=1744, ...}) = 0 <0.000009>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000016>
+ read(4, "#\n# /etc/nsswitch.conf\n#\n# An ex"..., 4096) = 1744 <0.000040>
+ read(4, "", 4096) = 0 <0.000007>
+ close(4)      = 0 <0.000009>
+ munmap(0x40015000, 4096) = 0 <0.000013>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000024>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000008>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000016>
+ close(4)      = 0 <0.000007>
+ open("/lib/libnss_files.so.2", O_RDONLY) = 4 <0.000023>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=246652, ...}) = 0 <0.000007>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0p \0\000"..., 4096) = 4096 <0.000036>
+ old_mmap(NULL, 36384, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x4010d000 <0.000015>
+ mprotect(0x40115000, 3616, PROT_NONE) = 0 <0.000012>
+ old_mmap(0x40115000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x7000) = 0x40115000 <0.000012>
+ close(4)      = 0 <0.000006>
+ munmap(0x40015000, 12210) = 0 <0.000016>
+ open("/etc/host.conf", O_RDONLY) = 4 <0.000027>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=26, ...}) = 0 <0.000010>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000017>
+ read(4, "order hosts,bind\nmulti on\n", 4096) = 26 <0.000030>
+ read(4, "", 4096) = 0 <0.000007>
+ close(4)      = 0 <0.000008>
+ munmap(0x40015000, 4096) = 0 <0.000013>
+ open("/etc/hosts", O_RDONLY) = 4 <0.000026>
+ fcntl(4, F_GETFD) = 0 <0.000008>
+ fcntl(4, F_SETFD, FD_CLOEXEC) = 0 <0.000006>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=44, ...}) = 0 <0.000009>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000016>
+ read(4, "127.0.0.1\t\t localhost.localdomai"..., 4096) = 44 <0.000031>
+ read(4, "", 4096) = 0 <0.000007>
+ close(4)      = 0 <0.000009>
+ munmap(0x40015000, 4096) = 0 <0.000013>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000023>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000007>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000016>
+ close(4)      = 0 <0.000007>
+ open("/lib/libnss_nisplus.so.2", O_RDONLY) = 4 <0.000022>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=252234, ...}) = 0 <0.000008>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\20\37\0"..., 4096) = 4096 <0.000036>
+ old_mmap(NULL, 41972, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40116000 <0.000015>
+ mprotect(0x4011f000, 5108, PROT_NONE) = 0 <0.000010>
+ old_mmap(0x4011f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x8000) = 0x4011f000 <0.000015>
+ close(4)      = 0 <0.000007>
+ open("/lib/libnsl.so.1", O_RDONLY) = 4 <0.000025>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=370141, ...}) = 0 <0.000008>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\20?\0\000"..., 4096) = 4096 <0.000034>
+ brk(0x804f000) = 0x804f000 <0.000012>
+ old_mmap(NULL, 88104, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40121000 <0.000010>
+ mprotect(0x40133000, 14376, PROT_NONE) = 0 <0.000010>
+ old_mmap(0x40133000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x11000) = 0x40133000 <0.000010>
+ old_mmap(0x40135000, 6184, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x40135000 <0.000011>
+ close(4)      = 0 <0.000007>
+ munmap(0x40015000, 12210) = 0 <0.000017>
+ uname({sys="Linux", node="localhost.localdomain", ...}) = 0 <0.000011>
+ open("/var/nis/NIS_COLD_START", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000028>
+ open("/var/nis/NIS_COLD_START", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000020>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000018>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000007>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000015>
+ close(4)      = 0 <0.000007>
+ open("/lib/libnss_nis.so.2", O_RDONLY) = 4 <0.000021>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=255963, ...}) = 0 <0.000007>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0`\37\0\000"..., 4096) = 4096 <0.000036>
+ old_mmap(NULL, 38488, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40137000 <0.000014>
+ mprotect(0x4013f000, 5720, PROT_NONE) = 0 <0.000011>
+ old_mmap(0x4013f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x7000) = 0x4013f000 <0.000012>
+ close(4)      = 0 <0.000006>
+ munmap(0x40015000, 12210) = 0 <0.000015>
+ uname({sys="Linux", node="localhost.localdomain", ...}) = 0 <0.000012>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000029>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000008>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000016>
+ close(4)      = 0 <0.000007>
+ open("/lib/libnss_dns.so.2", O_RDONLY) = 4 <0.000022>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=67580, ...}) = 0 <0.000007>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\300\r\0"..., 4096) = 4096 <0.000036>
+ old_mmap(NULL, 15088, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40141000 <0.000013>
+ mprotect(0x40144000, 2800, PROT_NONE) = 0 <0.000011>
+ old_mmap(0x40144000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x2000) = 0x40144000 <0.000013>
+ close(4)      = 0 <0.000007>
+ open("/lib/libresolv.so.2", O_RDONLY) = 4 <0.000028>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=169720, ...}) = 0 <0.000007>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340&\0"..., 4096) = 4096 <0.000036>
+ old_mmap(NULL, 60956, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40145000 <0.000019>
+ mprotect(0x40151000, 11804, PROT_NONE) = 0 <0.000010>
+ old_mmap(0x40151000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0xb000) = 0x40151000 <0.000013>
+ old_mmap(0x40152000, 7708, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x40152000 <0.000014>
+ close(4)      = 0 <0.000008>
+ munmap(0x40015000, 12210) = 0 <0.000017>
+ socket(PF_INET, SOCK_DGRAM, IPPROTO_IP) = 4 <0.000033>
+ connect(4, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, 16) = 0 <0.000020>
+ send(4, "\317\300\1\0\0\1\0\0\0\0\0\0\3www\fguneskayacik\2ca"..., 37, 0) = 37 <0.000079>
+ time(NULL)    = 1142548324 <0.000006>
+ poll([{fd=4, events=POLLIN, revents=POLLIN}], 1, 5000) = 1 <0.038838>
+ recvfrom(4, "\317\300\201\203\0\1\0\0\0\1\0\0\3www\fguneskayacik\2c"..., 1024, 0, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, [16]) = 93 <0.000020>
+ close(4)      = 0 <0.000024>
+ socket(PF_INET, SOCK_DGRAM, IPPROTO_IP) = 4 <0.000020>
+ connect(4, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, 16) = 0 <0.000012>
+ send(4, "\317\301\1\0\0\1\0\0\0\0\0\0\3www\fguneskayacik\2ca"..., 47, 0) = 47 <0.000039>
+ time(NULL)    = 1142548324 <0.000006>
+ poll([{fd=4, events=POLLIN, revents=POLLIN}], 1, 5000) = 1 <0.003069>
+ recvfrom(4, "\317\301\205\203\0\1\0\0\0\1\0\0\3www\fguneskayacik\2c"..., 1024, 0, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, [16]) = 91 <0.000018>
+ close(4)      = 0 <0.000022>
+ socket(PF_INET, SOCK_DGRAM, IPPROTO_IP) = 4 <0.000021>
+ connect(4, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, 16) = 0 <0.000012>
+ send(4, "\317\302\1\0\0\1\0\0\0\0\0\0\3www\fguneskayacik\2ca"..., 44, 0) = 44 <0.000037>
+ time(NULL)    = 1142548324 <0.000005>
+ poll([{fd=4, events=POLLIN, revents=POLLIN}], 1, 5000) = 1 <0.003155>
+ recvfrom(4, "\317\302\205\203\0\1\0\0\0\1\0\0\3www\fguneskayacik\2c"..., 1024, 0, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, [16]) = 88 <0.000014>
+ close(4)      = 0 <0.000018>
+ write(2, "traceroute: unknown host www.gun"..., 45) = 45 <0.000089>
+ _exit(1)      = ?

@@ -1,0 +1,24 @@
+ execve("/usr/sbin/traceroute", ["/usr/sbin/traceroute", "-h"], [/* 19 vars */]) = 0
+ brk(0)        = 0x804cedc <0.000011>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40014000 <0.000013>
+ open("/etc/ld.so.preload", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000025>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000015>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000008>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000015>
+ close(4)      = 0 <0.000008>
+ open("/lib/libc.so.6", O_RDONLY) = 4 <0.000020>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=4101324, ...}) = 0 <0.000008>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\210\212"..., 4096) = 4096 <0.000043>
+ old_mmap(NULL, 1001564, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40018000 <0.000015>
+ mprotect(0x40105000, 30812, PROT_NONE) = 0 <0.000014>
+ old_mmap(0x40105000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0xec000) = 0x40105000 <0.000014>
+ old_mmap(0x40109000, 14428, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x40109000 <0.000009>
+ close(4)      = 0 <0.000007>
+ mprotect(0x40018000, 970752, PROT_READ|PROT_WRITE) = 0 <0.000015>
+ mprotect(0x40018000, 970752, PROT_READ|PROT_EXEC) = 0 <0.000024>
+ munmap(0x40015000, 12210) = 0 <0.000021>
+ personality(PER_LINUX) = 0 <0.000007>
+ getpid()      = 740 <0.000007>
+ write(2, "Version 1.4a5\n", 14) = 14 <0.000073>
+ write(2, "Usage: traceroute [-dFInrvx] [-g"..., 162) = 162 <0.000171>
+ _exit(1)      = ?

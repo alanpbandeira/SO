@@ -1,0 +1,736 @@
+ execve("/usr/sbin/traceroute", ["/usr/sbin/traceroute", "www.google.com"], [/* 19 vars */]) = 0
+ brk(0)        = 0x804cedc <0.000012>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40014000 <0.000012>
+ open("/etc/ld.so.preload", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000024>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000016>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000010>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000015>
+ close(4)      = 0 <0.000006>
+ open("/lib/libc.so.6", O_RDONLY) = 4 <0.000024>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=4101324, ...}) = 0 <0.000008>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\210\212"..., 4096) = 4096 <0.000036>
+ old_mmap(NULL, 1001564, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40018000 <0.000011>
+ mprotect(0x40105000, 30812, PROT_NONE) = 0 <0.000012>
+ old_mmap(0x40105000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0xec000) = 0x40105000 <0.000014>
+ old_mmap(0x40109000, 14428, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x40109000 <0.000011>
+ close(4)      = 0 <0.000007>
+ mprotect(0x40018000, 970752, PROT_READ|PROT_WRITE) = 0 <0.000013>
+ mprotect(0x40018000, 970752, PROT_READ|PROT_EXEC) = 0 <0.000026>
+ munmap(0x40015000, 12210) = 0 <0.000022>
+ personality(PER_LINUX) = 0 <0.000007>
+ getpid()      = 686 <0.000006>
+ brk(0)        = 0x804cedc <0.000006>
+ brk(0x804cefc) = 0x804cefc <0.000006>
+ brk(0x804d000) = 0x804d000 <0.000006>
+ brk(0x804e000) = 0x804e000 <0.000014>
+ gettimeofday({1142547593, 204552}, NULL) = 0 <0.000007>
+ getpid()      = 686 <0.000006>
+ open("/etc/resolv.conf", O_RDONLY) = 4 <0.000033>
+ fstat64(0x4, 0xbffff460) = -1 ENOSYS (Function not implemented) <0.000007>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=48, ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000016>
+ read(4, "search cs.Dal.Ca Dal.Ca\nnameserv"..., 4096) = 48 <0.000034>
+ read(4, "", 4096) = 0 <0.000008>
+ close(4)      = 0 <0.000010>
+ munmap(0x40015000, 4096) = 0 <0.000014>
+ socket(PF_UNIX, SOCK_STREAM, 0) = 4 <0.000031>
+ connect(4, {sin_family=AF_UNIX, path="                                                                                       /var/run/.nscd_socket"}, 110) = -1 ECONNREFUSED (Connection refused) <0.000023>
+ close(4)      = 0 <0.000036>
+ open("/etc/nsswitch.conf", O_RDONLY) = 4 <0.000023>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=1744, ...}) = 0 <0.000009>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000016>
+ read(4, "#\n# /etc/nsswitch.conf\n#\n# An ex"..., 4096) = 1744 <0.000043>
+ read(4, "", 4096) = 0 <0.000009>
+ close(4)      = 0 <0.000009>
+ munmap(0x40015000, 4096) = 0 <0.000012>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000026>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000008>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000017>
+ close(4)      = 0 <0.000007>
+ open("/lib/libnss_files.so.2", O_RDONLY) = 4 <0.000027>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=246652, ...}) = 0 <0.000008>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0p \0\000"..., 4096) = 4096 <0.000039>
+ old_mmap(NULL, 36384, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x4010d000 <0.000016>
+ mprotect(0x40115000, 3616, PROT_NONE) = 0 <0.000012>
+ old_mmap(0x40115000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x7000) = 0x40115000 <0.000013>
+ close(4)      = 0 <0.000006>
+ munmap(0x40015000, 12210) = 0 <0.000015>
+ open("/etc/host.conf", O_RDONLY) = 4 <0.000025>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=26, ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000014>
+ read(4, "order hosts,bind\nmulti on\n", 4096) = 26 <0.000028>
+ read(4, "", 4096) = 0 <0.000007>
+ close(4)      = 0 <0.000007>
+ munmap(0x40015000, 4096) = 0 <0.000010>
+ open("/etc/hosts", O_RDONLY) = 4 <0.000021>
+ fcntl(4, F_GETFD) = 0 <0.000007>
+ fcntl(4, F_SETFD, FD_CLOEXEC) = 0 <0.000006>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=44, ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000013>
+ read(4, "127.0.0.1\t\t localhost.localdomai"..., 4096) = 44 <0.000027>
+ read(4, "", 4096) = 0 <0.000007>
+ close(4)      = 0 <0.000009>
+ munmap(0x40015000, 4096) = 0 <0.000009>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000020>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000008>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000016>
+ close(4)      = 0 <0.000006>
+ open("/lib/libnss_nisplus.so.2", O_RDONLY) = 4 <0.000025>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=252234, ...}) = 0 <0.000007>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\20\37\0"..., 4096) = 4096 <0.000037>
+ old_mmap(NULL, 41972, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40116000 <0.000013>
+ mprotect(0x4011f000, 5108, PROT_NONE) = 0 <0.000012>
+ old_mmap(0x4011f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x8000) = 0x4011f000 <0.000015>
+ close(4)      = 0 <0.000010>
+ open("/lib/libnsl.so.1", O_RDONLY) = 4 <0.000026>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=370141, ...}) = 0 <0.000010>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\20?\0\000"..., 4096) = 4096 <0.000036>
+ brk(0x804f000) = 0x804f000 <0.000012>
+ old_mmap(NULL, 88104, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40121000 <0.000010>
+ mprotect(0x40133000, 14376, PROT_NONE) = 0 <0.000010>
+ old_mmap(0x40133000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x11000) = 0x40133000 <0.000011>
+ old_mmap(0x40135000, 6184, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x40135000 <0.000010>
+ close(4)      = 0 <0.000008>
+ munmap(0x40015000, 12210) = 0 <0.000018>
+ uname({sys="Linux", node="localhost.localdomain", ...}) = 0 <0.000012>
+ open("/var/nis/NIS_COLD_START", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000032>
+ open("/var/nis/NIS_COLD_START", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000019>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000020>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000008>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000018>
+ close(4)      = 0 <0.000007>
+ open("/lib/libnss_nis.so.2", O_RDONLY) = 4 <0.000022>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=255963, ...}) = 0 <0.000007>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0`\37\0\000"..., 4096) = 4096 <0.000044>
+ old_mmap(NULL, 38488, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40137000 <0.000014>
+ mprotect(0x4013f000, 5720, PROT_NONE) = 0 <0.000011>
+ old_mmap(0x4013f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x7000) = 0x4013f000 <0.000013>
+ close(4)      = 0 <0.000007>
+ munmap(0x40015000, 12210) = 0 <0.000019>
+ uname({sys="Linux", node="localhost.localdomain", ...}) = 0 <0.000013>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000027>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000008>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000013>
+ close(4)      = 0 <0.000007>
+ open("/lib/libnss_dns.so.2", O_RDONLY) = 4 <0.000023>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=67580, ...}) = 0 <0.000007>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\300\r\0"..., 4096) = 4096 <0.000041>
+ old_mmap(NULL, 15088, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40141000 <0.000013>
+ mprotect(0x40144000, 2800, PROT_NONE) = 0 <0.000011>
+ old_mmap(0x40144000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x2000) = 0x40144000 <0.000013>
+ close(4)      = 0 <0.000006>
+ open("/lib/libresolv.so.2", O_RDONLY) = 4 <0.000028>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=169720, ...}) = 0 <0.000008>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340&\0"..., 4096) = 4096 <0.000036>
+ old_mmap(NULL, 60956, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40145000 <0.000014>
+ mprotect(0x40151000, 11804, PROT_NONE) = 0 <0.000009>
+ old_mmap(0x40151000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0xb000) = 0x40151000 <0.000012>
+ old_mmap(0x40152000, 7708, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x40152000 <0.000011>
+ close(4)      = 0 <0.000007>
+ munmap(0x40015000, 12210) = 0 <0.000015>
+ socket(PF_INET, SOCK_DGRAM, IPPROTO_IP) = 4 <0.000032>
+ connect(4, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, 16) = 0 <0.000018>
+ send(4, "\3710\1\0\0\1\0\0\0\0\0\0\3www\6google\3com\0\0\1\0\1", 32, 0) = 32 <0.000052>
+ time(NULL)    = 1142547593 <0.000007>
+ poll([{fd=4, events=POLLIN, revents=POLLIN}], 1, 5000) = 1 <0.004362>
+ recvfrom(4, "\3710\201\200\0\1\0\3\0\6\0\6\3www\6google\3com\0\0\1\0"..., 1024, 0, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, [16]) = 276 <0.000024>
+ close(4)      = 0 <0.000027>
+ brk(0x8050000) = 0x8050000 <0.000017>
+ write(2, "traceroute: Warning: www.google."..., 81) = 81 <0.000103>
+ getpid()      = 686 <0.000006>
+ open("/etc/protocols", O_RDONLY) = 4 <0.000050>
+ fcntl(4, F_GETFD) = 0 <0.000008>
+ fcntl(4, F_SETFD, FD_CLOEXEC) = 0 <0.000006>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=1567, ...}) = 0 <0.000007>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000016>
+ read(4, "# /etc/protocols:\n# $Id: protoco"..., 4096) = 1567 <0.000042>
+ close(4)      = 0 <0.000011>
+ munmap(0x40015000, 4096) = 0 <0.000014>
+ socket(PF_INET, SOCK_RAW, IPPROTO_ICMP) = 4 <0.000032>
+ socket(PF_INET, SOCK_RAW, IPPROTO_RAW) = 5 <0.000013>
+ getuid()      = 0 <0.000006>
+ setuid(0)     = 0 <0.000007>
+ setsockopt(5, SOL_SOCKET, SO_SNDBUF, [38], 4) = 0 <0.000010>
+ setsockopt(5, SOL_IP, IP_HDRINCL, [1], 4) = 0 <0.000009>
+ socket(PF_INET, SOCK_DGRAM, IPPROTO_IP) = 6 <0.000014>
+ ioctl(6, SIOCGIFCONF, 0xbffff600) = 0 <0.000017>
+ ioctl(6, SIOCGIFFLAGS, 0xbffff61c) = 0 <0.000009>
+ ioctl(6, SIOCGIFFLAGS, 0xbffff61c) = 0 <0.000008>
+ ioctl(6, SIOCGIFADDR, 0xbffff61c) = 0 <0.000009>
+ close(6)      = 0 <0.000018>
+ open("/proc/net/route", O_RDONLY) = 6 <0.000040>
+ fstat(6, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000015>
+ read(6, "Iface\tDestination\tGateway \tFlags"..., 1024) = 512 <0.000058>
+ read(6, "", 1024) = 0 <0.000009>
+ close(6)      = 0 <0.000012>
+ munmap(0x40015000, 4096) = 0 <0.000013>
+ write(2, "traceroute to www.l.google.com ("..., 47) = 47 <0.000052>
+ write(2, ", 30 hops max, 38 byte packets\n", 31) = 31 <0.000056>
+ fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(4, 1), ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000013>
+ ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0 <0.000016>
+ gettimeofday({1142547593, 223398}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\257\0\0\1\21c\335\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000071>
+ gettimeofday({1142547593, 223652}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999746}) = 1 (in [4], left {5, 0}) <0.001060>
+ recvfrom(4, "E\300\0B7\373\0\0@\1\344\341\254\24\2\1\254\24\2\365\v"..., 512, 0, {sin_family=AF_INET, sin_port=htons(33229), sin_addr=inet_addr("172.20.2.1")}}, [16]) = 66 <0.000021>
+ gettimeofday({1142547593, 225089}, {240, 0}) = 0 <0.000006>
+ uname({sys="Linux", node="localhost.localdomain", ...}) = 0 <0.000011>
+ socket(PF_UNIX, SOCK_STREAM, 0) = 6 <0.000026>
+ connect(6, {sin_family=AF_UNIX, path="                                                                                       /var/run/.nscd_socket"}, 110) = -1 ECONNREFUSED (Connection refused) <0.000028>
+ close(6)      = 0 <0.000036>
+ open("/etc/hosts", O_RDONLY) = 6 <0.000024>
+ fcntl(6, F_GETFD) = 0 <0.000008>
+ fcntl(6, F_SETFD, FD_CLOEXEC) = 0 <0.000006>
+ fstat(6, {st_mode=S_IFREG|0644, st_size=44, ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40016000 <0.000015>
+ read(6, "127.0.0.1\t\t localhost.localdomai"..., 4096) = 44 <0.000037>
+ read(6, "", 4096) = 0 <0.000007>
+ close(6)      = 0 <0.000008>
+ munmap(0x40016000, 4096) = 0 <0.000014>
+ open("/var/nis/NIS_COLD_START", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000026>
+ uname({sys="Linux", node="localhost.localdomain", ...}) = 0 <0.000012>
+ socket(PF_INET, SOCK_DGRAM, IPPROTO_IP) = 6 <0.000028>
+ connect(6, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, 16) = 0 <0.000018>
+ send(6, "\3711\1\0\0\1\0\0\0\0\0\0\0011\0012\00220\003172\7in-a"..., 41, 0) = 41 <0.000045>
+ time(NULL)    = 1142547593 <0.000006>
+ poll([{fd=6, events=POLLIN, revents=POLLIN}], 1, 5000) = 1 <0.013059>
+ recvfrom(6, "\3711\201\203\0\1\0\0\0\1\0\0\0011\0012\00220\003172\7"..., 1024, 0, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, [16]) = 118 <0.000021>
+ close(6)      = 0 <0.000023>
+ write(1, " 1  172.20.2.1 (172.20.2.1)  1.6"..., 37) = 37 <0.000056>
+ gettimeofday({1142547593, 240685}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\260\0\0\1\21\377\376\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000044>
+ gettimeofday({1142547593, 240943}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999742}) = 1 (in [4], left {5, 0}) <0.001105>
+ recvfrom(4, "E\300\0B7\374\0\0@\1\344\340\254\24\2\1\254\24\2\365\v"..., 512, 0, {sin_family=AF_INET, sin_port=htons(33229), sin_addr=inet_addr("172.20.2.1")}}, [16]) = 66 <0.000020>
+ gettimeofday({1142547593, 242379}, {240, 0}) = 0 <0.000006>
+ write(1, "  1.694 ms", 10) = 10 <0.000036>
+ gettimeofday({1142547593, 242552}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\261\0\0\1\21c\334\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000031>
+ gettimeofday({1142547593, 242760}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999792}) = 1 (in [4], left {5, 0}) <0.001075>
+ recvfrom(4, "E\300\0B7\375\0\0@\1\344\337\254\24\2\1\254\24\2\365\v"..., 512, 0, {sin_family=AF_INET, sin_port=htons(33229), sin_addr=inet_addr("172.20.2.1")}}, [16]) = 66 <0.000017>
+ gettimeofday({1142547593, 244160}, {240, 0}) = 0 <0.000006>
+ write(1, "  1.608 ms", 10) = 10 <0.000036>
+ write(1, "\n", 1) = 1 <0.000046>
+ gettimeofday({1142547593, 244436}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\262\0\0\2\21\376\375\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000034>
+ gettimeofday({1142547593, 244649}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999787}) = 1 (in [4], left {5, 0}) <0.003509>
+ recvfrom(4, "E\300\0008\240\213\0\0\376\1\250\301\201\255B\1\254\24"..., 512, 0, {sin_family=AF_INET, sin_port=htons(33229), sin_addr=inet_addr("129.173.66.1")}}, [16]) = 56 <0.000018>
+ gettimeofday({1142547593, 248504}, {240, 0}) = 0 <0.000006>
+ socket(PF_UNIX, SOCK_STREAM, 0) = 6 <0.000022>
+ connect(6, {sin_family=AF_UNIX, path="                                                                                       /var/run/.nscd_socket"}, 110) = -1 ECONNREFUSED (Connection refused) <0.000028>
+ close(6)      = 0 <0.000035>
+ open("/etc/hosts", O_RDONLY) = 6 <0.000020>
+ fcntl(6, F_GETFD) = 0 <0.000007>
+ fcntl(6, F_SETFD, FD_CLOEXEC) = 0 <0.000006>
+ fstat(6, {st_mode=S_IFREG|0644, st_size=44, ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40016000 <0.000020>
+ read(6, "127.0.0.1\t\t localhost.localdomai"..., 4096) = 44 <0.000036>
+ read(6, "", 4096) = 0 <0.000007>
+ close(6)      = 0 <0.000008>
+ munmap(0x40016000, 4096) = 0 <0.000015>
+ open("/var/nis/NIS_COLD_START", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000026>
+ uname({sys="Linux", node="localhost.localdomain", ...}) = 0 <0.000012>
+ socket(PF_INET, SOCK_DGRAM, IPPROTO_IP) = 6 <0.000026>
+ connect(6, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, 16) = 0 <0.000016>
+ send(6, "\3712\1\0\0\1\0\0\0\0\0\0\0011\00266\003173\003129\7in"..., 43, 0) = 43 <0.000039>
+ time(NULL)    = 1142547593 <0.000006>
+ poll([{fd=6, events=POLLIN, revents=POLLIN}], 1, 5000) = 1 <0.003333>
+ recvfrom(6, "\3712\205\200\0\1\0\1\0\2\0\2\0011\00266\003173\003129"..., 1024, 0, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, [16]) = 151 <0.000017>
+ close(6)      = 0 <0.000023>
+ write(1, " 2  dal-gw.Backbone.Dal.Ca (129."..., 51) = 51 <0.000062>
+ gettimeofday({1142547593, 254073}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\263\0\0\2\21c\333\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000042>
+ gettimeofday({1142547593, 254304}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999769}) = 1 (in [4], left {5, 0}) <0.002534>
+ recvfrom(4, "E\300\0008\240\214\0\0\376\1\250\300\201\255B\1\254\24"..., 512, 0, {sin_family=AF_INET, sin_port=htons(33229), sin_addr=inet_addr("129.173.66.1")}}, [16]) = 56 <0.000016>
+ gettimeofday({1142547593, 257170}, {240, 0}) = 0 <0.000006>
+ write(1, "  3.097 ms", 10) = 10 <0.000039>
+ gettimeofday({1142547593, 257346}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\264\0\0\2\21\376\374\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000035>
+ gettimeofday({1142547593, 257560}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999786}) = 1 (in [4], left {5, 0}) <0.002627>
+ recvfrom(4, "E\300\0008\240\215\0\0\376\1\250\277\201\255B\1\254\24"..., 512, 0, {sin_family=AF_INET, sin_port=htons(33229), sin_addr=inet_addr("129.173.66.1")}}, [16]) = 56 <0.000018>
+ gettimeofday({1142547593, 260516}, {240, 0}) = 0 <0.000006>
+ write(1, "  3.170 ms", 10) = 10 <0.000034>
+ write(1, "\n", 1) = 1 <0.000047>
+ gettimeofday({1142547593, 260821}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\265\0\0\3\21b\332\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000035>
+ gettimeofday({1142547593, 261032}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999789}) = 1 (in [4], left {5, 0}) <0.002496>
+ recvfrom(4, "E\0\0008o\222\0\0\375\1\327q\306\246\1\21\254\24\2\365"..., 512, 0, {sin_family=AF_INET, sin_port=htons(4288), sin_addr=inet_addr("198.166.1.17")}}, [16]) = 56 <0.000016>
+ gettimeofday({1142547593, 263858}, {240, 0}) = 0 <0.000006>
+ socket(PF_UNIX, SOCK_STREAM, 0) = 6 <0.000027>
+ connect(6, {sin_family=AF_UNIX, path="                                                                                       /var/run/.nscd_socket"}, 110) = -1 ECONNREFUSED (Connection refused) <0.000025>
+ close(6)      = 0 <0.000035>
+ open("/etc/hosts", O_RDONLY) = 6 <0.000024>
+ fcntl(6, F_GETFD) = 0 <0.000007>
+ fcntl(6, F_SETFD, FD_CLOEXEC) = 0 <0.000006>
+ fstat(6, {st_mode=S_IFREG|0644, st_size=44, ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40016000 <0.000017>
+ read(6, "127.0.0.1\t\t localhost.localdomai"..., 4096) = 44 <0.000030>
+ read(6, "", 4096) = 0 <0.000006>
+ close(6)      = 0 <0.000008>
+ munmap(0x40016000, 4096) = 0 <0.000012>
+ open("/var/nis/NIS_COLD_START", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000022>
+ uname({sys="Linux", node="localhost.localdomain", ...}) = 0 <0.000010>
+ socket(PF_INET, SOCK_DGRAM, IPPROTO_IP) = 6 <0.000023>
+ connect(6, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, 16) = 0 <0.000015>
+ send(6, "\3713\1\0\0\1\0\0\0\0\0\0\00217\0011\003166\003198\7in"..., 43, 0) = 43 <0.000039>
+ time(NULL)    = 1142547593 <0.000006>
+ poll([{fd=6, events=POLLIN, revents=POLLIN}], 1, 5000) = 1 <0.003398>
+ recvfrom(6, "\3713\205\200\0\1\0\1\0\2\0\1\00217\0011\003166\003198"..., 1024, 0, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, [16]) = 144 <0.000020>
+ close(6)      = 0 <0.000024>
+ write(1, " 3  GigaPOP-gw.acorn-ns.Ca (198."..., 51) = 51 <0.000065>
+ gettimeofday({1142547593, 269389}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\266\0\0\3\21\376\373\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000041>
+ gettimeofday({1142547593, 269610}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999779}) = 1 (in [4], left {4, 990000}) <0.002569>
+ recvfrom(4, "E\0\0008o\223\0\0\375\1\327p\306\246\1\21\254\24\2\365"..., 512, 0, {sin_family=AF_INET, sin_port=htons(4288), sin_addr=inet_addr("198.166.1.17")}}, [16]) = 56 <0.000015>
+ gettimeofday({1142547593, 272510}, {240, 0}) = 0 <0.000006>
+ write(1, "  3.121 ms", 10) = 10 <0.000037>
+ gettimeofday({1142547593, 272686}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\267\0\0\3\21b\331\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000035>
+ gettimeofday({1142547593, 272896}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999790}) = 1 (in [4], left {5, 0}) <0.002579>
+ recvfrom(4, "E\0\0008o\224\0\0\375\1\327o\306\246\1\21\254\24\2\365"..., 512, 0, {sin_family=AF_INET, sin_port=htons(4288), sin_addr=inet_addr("198.166.1.17")}}, [16]) = 56 <0.000017>
+ gettimeofday({1142547593, 275822}, {240, 0}) = 0 <0.000006>
+ write(1, "  3.136 ms", 10) = 10 <0.000035>
+ write(1, "\n", 1) = 1 <0.000048>
+ gettimeofday({1142547593, 276091}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\270\0\0\4\21\375\372\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000032>
+ gettimeofday({1142547593, 276301}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999790}) = 0 (Timeout) <4.994383>
+ write(1, " 4  *", 5) = 5 <0.000037>
+ gettimeofday({1142547598, 270955}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\271\0\0\4\21b\330\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000063>
+ gettimeofday({1142547598, 271189}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999766}) = 0 (Timeout) <4.999508>
+ write(1, " *", 2) = 2 <0.000045>
+ gettimeofday({1142547603, 271049}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\272\0\0\4\21\375\371\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000073>
+ gettimeofday({1142547603, 271307}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999742}) = 0 (Timeout) <4.999389>
+ write(1, " *", 2) = 2 <0.000043>
+ write(1, "\n", 1) = 1 <0.000045>
+ gettimeofday({1142547608, 271146}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\273\0\0\5\21a\327\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000071>
+ gettimeofday({1142547608, 271400}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999746}) = 0 (Timeout) <4.999281>
+ write(1, " 5  *", 5) = 5 <0.000035>
+ gettimeofday({1142547613, 270936}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\274\0\0\5\21\375\370\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000055>
+ gettimeofday({1142547613, 271155}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999781}) = 0 (Timeout) <4.999527>
+ write(1, " *", 2) = 2 <0.000033>
+ gettimeofday({1142547618, 270927}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\275\0\0\5\21a\326\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000066>
+ gettimeofday({1142547618, 271160}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999767}) = 0 (Timeout) <4.999561>
+ write(1, " *", 2) = 2 <0.000039>
+ write(1, "\n", 1) = 1 <0.000047>
+ gettimeofday({1142547623, 271116}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\276\0\0\6\21\374\367\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000062>
+ gettimeofday({1142547623, 271390}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999726}) = 0 (Timeout) <4.999303>
+ write(1, " 6  *", 5) = 5 <0.000028>
+ gettimeofday({1142547628, 271015}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\277\0\0\6\21a\325\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000070>
+ gettimeofday({1142547628, 271265}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999750}) = 0 (Timeout) <4.999429>
+ write(1, " *", 2) = 2 <0.000020>
+ gettimeofday({1142547633, 271020}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\300\0\0\6\21\374\366\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000075>
+ gettimeofday({1142547633, 271277}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999743}) = 0 (Timeout) <4.999417>
+ write(1, " *", 2) = 2 <0.000025>
+ write(1, "\n", 1) = 1 <0.000033>
+ gettimeofday({1142547638, 271094}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\301\0\0\7\21`\324\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000072>
+ gettimeofday({1142547638, 271344}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999750}) = 0 (Timeout) <4.999352>
+ write(1, " 7  *", 5) = 5 <0.000027>
+ gettimeofday({1142547643, 271031}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\302\0\0\7\21\374\365\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000072>
+ gettimeofday({1142547643, 271292}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999739}) = 0 (Timeout) <4.999402>
+ write(1, " *", 2) = 2 <0.000032>
+ gettimeofday({1142547648, 271024}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\303\0\0\7\21`\323\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000071>
+ gettimeofday({1142547648, 271282}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999742}) = 0 (Timeout) <4.999399>
+ write(1, " *", 2) = 2 <0.000022>
+ write(1, "\n", 1) = 1 <0.000029>
+ gettimeofday({1142547653, 271011}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\304\0\0\10\21\373\364\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000041>
+ gettimeofday({1142547653, 271244}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999767}) = 0 (Timeout) <4.999442>
+ write(1, " 8  *", 5) = 5 <0.000019>
+ gettimeofday({1142547658, 270952}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\305\0\0\10\21`\322\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000046>
+ gettimeofday({1142547658, 271194}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999758}) = 0 (Timeout) <4.999508>
+ write(1, " *", 2) = 2 <0.000020>
+ gettimeofday({1142547663, 271062}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\306\0\0\10\21\373\363\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000050>
+ gettimeofday({1142547663, 271319}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999743}) = 0 (Timeout) <4.999377>
+ write(1, " *", 2) = 2 <0.000017>
+ write(1, "\n", 1) = 1 <0.000025>
+ gettimeofday({1142547668, 271060}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\307\0\0\t\21_\321\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000044>
+ gettimeofday({1142547668, 271297}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999763}) = 0 (Timeout) <4.999398>
+ write(1, " 9  *", 5) = 5 <0.000022>
+ gettimeofday({1142547673, 271025}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\310\0\0\t\21\373\362\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000075>
+ gettimeofday({1142547673, 271288}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999737}) = 0 (Timeout) <4.999394>
+ write(1, " *", 2) = 2 <0.000035>
+ gettimeofday({1142547678, 270944}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\311\0\0\t\21_\320\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000045>
+ gettimeofday({1142547678, 271181}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999763}) = 0 (Timeout) <4.999557>
+ write(1, " *", 2) = 2 <0.000042>
+ write(1, "\n", 1) = 1 <0.000046>
+ gettimeofday({1142547683, 271218}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\312\0\0\n\21\372\361\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000044>
+ gettimeofday({1142547683, 271461}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999757}) = 0 (Timeout) <4.999220>
+ write(1, "10  *", 5) = 5 <0.000038>
+ gettimeofday({1142547688, 270949}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\313\0\0\n\21_\317\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000045>
+ gettimeofday({1142547688, 271186}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999763}) = 0 (Timeout) <4.999499>
+ write(1, " *", 2) = 2 <0.000034>
+ gettimeofday({1142547693, 270947}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\314\0\0\n\21\372\360\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000043>
+ gettimeofday({1142547693, 271184}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999763}) = 0 (Timeout) <4.999505>
+ write(1, " *", 2) = 2 <0.000038>
+ write(1, "\n", 1) = 1 <0.000045>
+ gettimeofday({1142547698, 271083}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\315\0\0\v\21^\316\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000069>
+ gettimeofday({1142547698, 271352}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999731}) = 0 (Timeout) <4.999340>
+ write(1, "11  *", 5) = 5 <0.000043>
+ gettimeofday({1142547703, 271035}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\316\0\0\v\21\372\357\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000075>
+ gettimeofday({1142547703, 271288}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999747}) = 0 (Timeout) <4.999397>
+ write(1, " *", 2) = 2 <0.000036>
+ gettimeofday({1142547708, 270955}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\317\0\0\v\21^\315\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000043>
+ gettimeofday({1142547708, 271187}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999768}) = 0 (Timeout) <4.999496>
+ write(1, " *", 2) = 2 <0.000036>
+ write(1, "\n", 1) = 1 <0.000048>
+ gettimeofday({1142547713, 271047}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\320\0\0\f\21\371\356\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000041>
+ gettimeofday({1142547713, 271271}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999776}) = 0 (Timeout) <4.999412>
+ write(1, "12  *", 5) = 5 <0.000039>
+ gettimeofday({1142547718, 270949}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\321\0\0\f\21^\314\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000041>
+ gettimeofday({1142547718, 271176}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999773}) = 0 (Timeout) <4.999517>
+ write(1, " *", 2) = 2 <0.000039>
+ gettimeofday({1142547723, 271003}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\322\0\0\f\21\371\355\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000064>
+ gettimeofday({1142547723, 271241}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999762}) = 0 (Timeout) <4.999452>
+ write(1, " *", 2) = 2 <0.000037>
+ write(1, "\n", 1) = 1 <0.000044>
+ gettimeofday({1142547728, 271088}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\323\0\0\r\21]\313\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000067>
+ gettimeofday({1142547728, 271334}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999754}) = 0 (Timeout) <4.999361>
+ write(1, "13  *", 5) = 5 <0.000023>
+ gettimeofday({1142547733, 271019}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\324\0\0\r\21\371\354\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000053>
+ gettimeofday({1142547733, 271273}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999746}) = 0 (Timeout) <4.999427>
+ write(1, " *", 2) = 2 <0.000029>
+ gettimeofday({1142547738, 271059}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\325\0\0\r\21]\312\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000079>
+ gettimeofday({1142547738, 271322}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999737}) = 0 (Timeout) <4.999406>
+ write(1, " *", 2) = 2 <0.000030>
+ write(1, "\n", 1) = 1 <0.000026>
+ gettimeofday({1142547743, 271126}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\326\0\0\16\21\370\353\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000040>
+ gettimeofday({1142547743, 271357}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999769}) = 0 (Timeout) <4.999332>
+ write(1, "14  *", 5) = 5 <0.000037>
+ gettimeofday({1142547748, 270986}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\327\0\0\16\21]\311\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000047>
+ gettimeofday({1142547748, 271229}, {240, 0}) = 0 <0.000009>
+ select(5, [4], NULL, NULL, {4, 999757}) = 0 (Timeout) <4.999455>
+ write(1, " *", 2) = 2 <0.000036>
+ gettimeofday({1142547753, 270946}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\330\0\0\16\21\370\352\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000038>
+ gettimeofday({1142547753, 271169}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999777}) = 0 (Timeout) <4.999526>
+ write(1, " *", 2) = 2 <0.000044>
+ write(1, "\n", 1) = 1 <0.000048>
+ gettimeofday({1142547758, 271124}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\331\0\0\17\21\\\310\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000075>
+ gettimeofday({1142547758, 271376}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999748}) = 0 (Timeout) <4.999307>
+ write(1, "15  *", 5) = 5 <0.000038>
+ gettimeofday({1142547763, 270952}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\332\0\0\17\21\370\351\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000042>
+ gettimeofday({1142547763, 271184}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999768}) = 0 (Timeout) <4.999499>
+ write(1, " *", 2) = 2 <0.000033>
+ gettimeofday({1142547768, 270925}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\333\0\0\17\21\\\307\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000039>
+ gettimeofday({1142547768, 271149}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999776}) = 0 (Timeout) <4.999536>
+ write(1, " *", 2) = 2 <0.000037>
+ write(1, "\n", 1) = 1 <0.000046>
+ gettimeofday({1142547773, 271043}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\334\0\0\20\21\367\350\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000065>
+ gettimeofday({1142547773, 271320}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999723}) = 0 (Timeout) <4.999373>
+ write(1, "16  *", 5) = 5 <0.000040>
+ gettimeofday({1142547778, 271015}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\335\0\0\20\21\\\306\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000064>
+ gettimeofday({1142547778, 271259}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999756}) = 0 (Timeout) <4.999428>
+ write(1, " *", 2) = 2 <0.000038>
+ gettimeofday({1142547783, 270969}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\336\0\0\20\21\367\347\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000044>
+ gettimeofday({1142547783, 271206}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999763}) = 0 (Timeout) <4.999477>
+ write(1, " *", 2) = 2 <0.000034>
+ write(1, "\n", 1) = 1 <0.000047>
+ gettimeofday({1142547788, 271035}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\337\0\0\21\21[\305\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000042>
+ gettimeofday({1142547788, 271268}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999767}) = 0 (Timeout) <4.999415>
+ write(1, "17  *", 5) = 5 <0.000037>
+ gettimeofday({1142547793, 270947}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\340\0\0\21\21\367\346\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000042>
+ gettimeofday({1142547793, 271180}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999767}) = 0 (Timeout) <4.999520>
+ write(1, " *", 2) = 2 <0.000017>
+ gettimeofday({1142547798, 271018}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\341\0\0\21\21[\304\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000081>
+ gettimeofday({1142547798, 271291}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999727}) = 0 (Timeout) <4.999445>
+ write(1, " *", 2) = 2 <0.000027>
+ write(1, "\n", 1) = 1 <0.000029>
+ gettimeofday({1142547803, 271189}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\342\0\0\22\21\366\345\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000046>
+ gettimeofday({1142547803, 271445}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999744}) = 0 (Timeout) <4.999247>
+ write(1, "18  *", 5) = 5 <0.000021>
+ gettimeofday({1142547808, 271018}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\343\0\0\22\21[\303\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000052>
+ gettimeofday({1142547808, 271284}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999734}) = 0 (Timeout) <4.999416>
+ write(1, " *", 2) = 2 <0.000021>
+ gettimeofday({1142547813, 271058}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\344\0\0\22\21\366\344\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000050>
+ gettimeofday({1142547813, 271315}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999743}) = 0 (Timeout) <4.999377>
+ write(1, " *", 2) = 2 <0.000022>
+ write(1, "\n", 1) = 1 <0.000025>
+ gettimeofday({1142547818, 271109}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\345\0\0\23\21Z\302\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000053>
+ gettimeofday({1142547818, 271375}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999734}) = 0 (Timeout) <4.999315>
+ write(1, "19  *", 5) = 5 <0.000030>
+ gettimeofday({1142547823, 271036}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\346\0\0\23\21\366\343\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000052>
+ gettimeofday({1142547823, 271299}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999737}) = 0 (Timeout) <4.999387>
+ write(1, " *", 2) = 2 <0.000040>
+ gettimeofday({1142547828, 270981}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\347\0\0\23\21Z\301\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000052>
+ gettimeofday({1142547828, 271234}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999747}) = 0 (Timeout) <4.999496>
+ write(1, " *", 2) = 2 <0.000038>
+ write(1, "\n", 1) = 1 <0.000046>
+ gettimeofday({1142547833, 271186}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\350\0\0\24\21\365\342\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000040>
+ gettimeofday({1142547833, 271424}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999762}) = 0 (Timeout) <4.999254>
+ write(1, "20  *", 5) = 5 <0.000038>
+ gettimeofday({1142547838, 270948}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\351\0\0\24\21Z\300\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000041>
+ gettimeofday({1142547838, 271184}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999764}) = 0 (Timeout) <4.999498>
+ write(1, " *", 2) = 2 <0.000038>
+ gettimeofday({1142547843, 270959}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\352\0\0\24\21\365\341\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000042>
+ gettimeofday({1142547843, 271201}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999758}) = 0 (Timeout) <4.999477>
+ write(1, " *", 2) = 2 <0.000033>
+ write(1, "\n", 1) = 1 <0.000045>
+ gettimeofday({1142547848, 271036}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\353\0\0\25\21Y\277\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000043>
+ gettimeofday({1142547848, 271295}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999741}) = 0 (Timeout) <4.999398>
+ write(1, "21  *", 5) = 5 <0.000043>
+ gettimeofday({1142547853, 271035}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\354\0\0\25\21\365\340\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000069>
+ gettimeofday({1142547853, 271285}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999750}) = 0 (Timeout) <4.999399>
+ write(1, " *", 2) = 2 <0.000038>
+ gettimeofday({1142547858, 270962}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\355\0\0\25\21Y\276\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000067>
+ gettimeofday({1142547858, 271205}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999757}) = 0 (Timeout) <4.999512>
+ write(1, " *", 2) = 2 <0.000035>
+ write(1, "\n", 1) = 1 <0.000047>
+ gettimeofday({1142547863, 271123}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\356\0\0\26\21\364\337\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000038>
+ gettimeofday({1142547863, 271353}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999770}) = 0 (Timeout) <4.999333>
+ write(1, "22  *", 5) = 5 <0.000038>
+ gettimeofday({1142547868, 270957}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\357\0\0\26\21Y\275\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000038>
+ gettimeofday({1142547868, 271184}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999773}) = 0 (Timeout) <4.999510>
+ write(1, " *", 2) = 2 <0.000047>
+ gettimeofday({1142547873, 271042}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\360\0\0\26\21\364\336\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000072>
+ gettimeofday({1142547873, 271302}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999740}) = 0 (Timeout) <4.999387>
+ write(1, " *", 2) = 2 <0.000038>
+ write(1, "\n", 1) = 1 <0.000046>
+ gettimeofday({1142547878, 271083}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\361\0\0\27\21X\274\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000068>
+ gettimeofday({1142547878, 271328}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999755}) = 0 (Timeout) <4.999355>
+ write(1, "23  *", 5) = 5 <0.000037>
+ gettimeofday({1142547883, 270948}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\362\0\0\27\21\364\335\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000041>
+ gettimeofday({1142547883, 271181}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999767}) = 0 (Timeout) <4.999514>
+ write(1, " *", 2) = 2 <0.000040>
+ gettimeofday({1142547888, 271050}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\363\0\0\27\21X\273\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000069>
+ gettimeofday({1142547888, 271299}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999751}) = 0 (Timeout) <4.999419>
+ write(1, " *", 2) = 2 <0.000037>
+ write(1, "\n", 1) = 1 <0.000048>
+ gettimeofday({1142547893, 271125}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\364\0\0\30\21\363\334\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000059>
+ gettimeofday({1142547893, 271359}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999766}) = 0 (Timeout) <4.999329>
+ write(1, "24  *", 5) = 5 <0.000040>
+ gettimeofday({1142547898, 270977}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\365\0\0\30\21X\272\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000044>
+ gettimeofday({1142547898, 271211}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999766}) = 0 (Timeout) <4.999473>
+ write(1, " *", 2) = 2 <0.000036>
+ gettimeofday({1142547903, 270956}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\366\0\0\30\21\363\333\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000043>
+ gettimeofday({1142547903, 271188}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999768}) = 0 (Timeout) <4.999509>
+ write(1, " *", 2) = 2 <0.000043>
+ write(1, "\n", 1) = 1 <0.000048>
+ gettimeofday({1142547908, 271142}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\367\0\0\31\21W\271\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000073>
+ gettimeofday({1142547908, 271399}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999743}) = 0 (Timeout) <4.999283>
+ write(1, "25  *", 5) = 5 <0.000034>
+ gettimeofday({1142547913, 270947}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\370\0\0\31\21\363\332\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000041>
+ gettimeofday({1142547913, 271180}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999767}) = 0 (Timeout) <4.999502>
+ write(1, " *", 2) = 2 <0.000032>
+ gettimeofday({1142547918, 270931}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\371\0\0\31\21W\270\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000046>
+ gettimeofday({1142547918, 271165}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999766}) = 0 (Timeout) <4.999555>
+ write(1, " *", 2) = 2 <0.000039>
+ write(1, "\n", 1) = 1 <0.000044>
+ gettimeofday({1142547923, 271122}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\372\0\0\32\21\362\331\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000055>
+ gettimeofday({1142547923, 271371}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999751}) = 0 (Timeout) <4.999321>
+ write(1, "26  *", 5) = 5 <0.000043>
+ gettimeofday({1142547928, 271041}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\373\0\0\32\21W\267\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000050>
+ gettimeofday({1142547928, 271296}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999745}) = 0 (Timeout) <4.999387>
+ write(1, " *", 2) = 2 <0.000036>
+ gettimeofday({1142547933, 270957}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\374\0\0\32\21\362\330\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000044>
+ gettimeofday({1142547933, 271191}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999766}) = 0 (Timeout) <4.999496>
+ write(1, " *", 2) = 2 <0.000040>
+ write(1, "\n", 1) = 1 <0.000047>
+ gettimeofday({1142547938, 271087}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\375\0\0\33\21V\266\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000067>
+ gettimeofday({1142547938, 271334}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999753}) = 0 (Timeout) <4.999347>
+ write(1, "27  *", 5) = 5 <0.000033>
+ gettimeofday({1142547943, 270937}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\376\0\0\33\21\362\327\254\24\2\365\330\357%"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000038>
+ gettimeofday({1142547943, 271158}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999779}) = 0 (Timeout) <4.999537>
+ write(1, " *", 2) = 2 <0.000042>
+ gettimeofday({1142547948, 271031}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\377\0\0\33\21V\265\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000075>
+ gettimeofday({1142547948, 271291}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999740}) = 0 (Timeout) <4.999425>
+ write(1, " *", 2) = 2 <0.000038>
+ write(1, "\n", 1) = 1 <0.000045>
+ gettimeofday({1142547953, 271129}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\203\0\0\0\34\21\361\326\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000039>
+ gettimeofday({1142547953, 271355}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999774}) = 0 (Timeout) <4.999326>
+ write(1, "28  *", 5) = 5 <0.000037>
+ gettimeofday({1142547958, 270946}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\203\1\0\0\34\21V\264\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000040>
+ gettimeofday({1142547958, 271179}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999767}) = 0 (Timeout) <4.999522>
+ write(1, " *", 2) = 2 <0.000043>
+ gettimeofday({1142547963, 271071}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\203\2\0\0\34\21\361\325\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000073>
+ gettimeofday({1142547963, 271329}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999742}) = 0 (Timeout) <4.999356>
+ write(1, " *", 2) = 2 <0.000034>
+ write(1, "\n", 1) = 1 <0.000046>
+ gettimeofday({1142547968, 271050}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\203\3\0\0\35\21U\263\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000062>
+ gettimeofday({1142547968, 271284}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999766}) = 0 (Timeout) <4.999400>
+ write(1, "29  *", 5) = 5 <0.000036>
+ gettimeofday({1142547973, 270960}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\203\4\0\0\35\21\361\324\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000042>
+ gettimeofday({1142547973, 271191}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999769}) = 0 (Timeout) <4.999489>
+ write(1, " *", 2) = 2 <0.000033>
+ gettimeofday({1142547978, 270927}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\203\5\0\0\35\21U\262\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000046>
+ gettimeofday({1142547978, 271159}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999768}) = 0 (Timeout) <4.999580>
+ write(1, " *", 2) = 2 <0.000043>
+ write(1, "\n", 1) = 1 <0.000049>
+ gettimeofday({1142547983, 271219}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\203\6\0\0\36\21\360\323\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000045>
+ gettimeofday({1142547983, 271465}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999754}) = 0 (Timeout) <4.999213>
+ write(1, "30  *", 5) = 5 <0.000039>
+ gettimeofday({1142547988, 270947}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\203\7\0\0\36\21U\261\254\24\2\365\330\357%h\202"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000042>
+ gettimeofday({1142547988, 271175}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999772}) = 0 (Timeout) <4.999508>
+ write(1, " *", 2) = 2 <0.000034>
+ gettimeofday({1142547993, 270946}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\203\10\0\0\36\21\360\322\254\24\2\365\330\357%h"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("216.239.37.104")}}, 16) = 38 <0.000041>
+ gettimeofday({1142547993, 271173}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999773}) = 0 (Timeout) <4.999512>
+ write(1, " *", 2) = 2 <0.000036>
+ write(1, "\n", 1) = 1 <0.000045>
+ munmap(0x40015000, 4096) = 0 <0.000014>
+ _exit(0)      = ?

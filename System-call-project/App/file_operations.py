@@ -25,7 +25,7 @@ def output_gram(file_name, grams):
     """
     Gera os arquivos .gram a partir da lista de grams fornecida.
     """
-    with open(file_name+'.gram', 'w') as output:
+    with open(file_name, 'w') as output:
         for idx in range(len(grams) - 1):
             data = [str(value) for value in grams[idx]]
             data = ",".join(data)
@@ -46,7 +46,10 @@ def syscall_id(syscall_file):
 
         id_calls = {}
 
-        calls = [line[:line.find('(')] for line in fhand][:-1]
+        calls = [line[:line.find('(')] for line in fhand]
+
+        if calls[-1][0] == '+':
+            calls = calls[:-1]
 
         for call in calls:
             if not id_calls.keys():
@@ -66,7 +69,18 @@ def syscall_id(syscall_file):
 
         return idx_file, list(range(max(id_calls.values()) + 1))
 
-def ngram_score(base_model, test_model):
+def reformat_input(file_name):
+    file_id = file_name[:file_name.rfind('.')]
+
+    with open(file_name, 'r') as fhand:
+        with open(file_id+".log", 'w') as log:
+            for line in fhand:
+                line = line[line.find('[')+1:]
+                line = line[line.find(']')+1:]
+
+                log.write(line)
+
+def ngram_score_ffile(base_model, test_model):
     """
     Calcula o score de similaridade entre ngrams ente o
     arquivo de teste e o modelo base.

@@ -54,19 +54,30 @@ class TST(object):
 
     def traverse_util(self, root, c_buffer, depth, str_len, results):
         if root is not None:
-            self.traverse_util(root.left_node, c_buffer, depth)
+            self.traverse_util(
+                root.left_node, c_buffer, depth, str_len, results)
             c_buffer[depth] = str(root.character)
 
             # Use the line below if you want to get only maximum depth keys
             # if not any([root.left_node, root.right_node, root.mid_node]):
             if root.value and depth == str_len:
-                results.append("".join(c_buffer[:depth+1]))
+                print(depth, str_len)
+            # if root.value:
+            # if depth == str_len:
+            #     print("here")
+                # results.append("".join(c_buffer[:depth+1]))
+                results.append("".join(c_buffer))
+                # print(results)
                 # print("".join(c_buffer[:depth+1]))
 
-            self.traverse_util(root.mid_node, c_buffer, depth+1)
+            self.traverse_util(
+                root.mid_node, c_buffer, depth+1, str_len, results)
 
-            self.traverse_util(root.right_node, c_buffer, depth)
+            self.traverse_util(
+                root.right_node, c_buffer, depth, str_len, results)
 
-    def traverse(self, str_size, max_gram, results):
+    def traverse(self, str_size, max_gram):
         buf = [''] * max_gram
+        results = []
         self.traverse_util(self.root, buf, 0, str_size, results)
+        return results

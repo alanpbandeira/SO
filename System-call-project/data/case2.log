@@ -1,0 +1,260 @@
+ execve("/usr/sbin/traceroute", ["/usr/sbin/traceroute", "www.cs.dal.ca"], [/* 19 vars */]) = 0
+ brk(0)        = 0x804cedc <0.000009>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40014000 <0.000012>
+ open("/etc/ld.so.preload", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000021>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000015>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000007>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000012>
+ close(4)      = 0 <0.000007>
+ open("/lib/libc.so.6", O_RDONLY) = 4 <0.000022>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=4101324, ...}) = 0 <0.000008>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\210\212"..., 4096) = 4096 <0.000035>
+ old_mmap(NULL, 1001564, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40018000 <0.000014>
+ mprotect(0x40105000, 30812, PROT_NONE) = 0 <0.000013>
+ old_mmap(0x40105000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0xec000) = 0x40105000 <0.000014>
+ old_mmap(0x40109000, 14428, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x40109000 <0.000011>
+ close(4)      = 0 <0.000006>
+ mprotect(0x40018000, 970752, PROT_READ|PROT_WRITE) = 0 <0.000016>
+ mprotect(0x40018000, 970752, PROT_READ|PROT_EXEC) = 0 <0.000027>
+ munmap(0x40015000, 12210) = 0 <0.000021>
+ personality(PER_LINUX) = 0 <0.000007>
+ getpid()      = 736 <0.000006>
+ brk(0)        = 0x804cedc <0.000006>
+ brk(0x804cefc) = 0x804cefc <0.000006>
+ brk(0x804d000) = 0x804d000 <0.000006>
+ brk(0x804e000) = 0x804e000 <0.000015>
+ gettimeofday({1142548308, 81329}, NULL) = 0 <0.000007>
+ getpid()      = 736 <0.000006>
+ open("/etc/resolv.conf", O_RDONLY) = 4 <0.000030>
+ fstat64(0x4, 0xbffff460) = -1 ENOSYS (Function not implemented) <0.000007>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=48, ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000017>
+ read(4, "search cs.Dal.Ca Dal.Ca\nnameserv"..., 4096) = 48 <0.000036>
+ read(4, "", 4096) = 0 <0.000007>
+ close(4)      = 0 <0.000010>
+ munmap(0x40015000, 4096) = 0 <0.000015>
+ socket(PF_UNIX, SOCK_STREAM, 0) = 4 <0.000029>
+ connect(4, {sin_family=AF_UNIX, path="                                                                                       /var/run/.nscd_socket"}, 110) = -1 ECONNREFUSED (Connection refused) <0.000024>
+ close(4)      = 0 <0.000036>
+ open("/etc/nsswitch.conf", O_RDONLY) = 4 <0.000023>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=1744, ...}) = 0 <0.000010>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000017>
+ read(4, "#\n# /etc/nsswitch.conf\n#\n# An ex"..., 4096) = 1744 <0.000042>
+ read(4, "", 4096) = 0 <0.000007>
+ close(4)      = 0 <0.000008>
+ munmap(0x40015000, 4096) = 0 <0.000012>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000027>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000008>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000016>
+ close(4)      = 0 <0.000007>
+ open("/lib/libnss_files.so.2", O_RDONLY) = 4 <0.000028>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=246652, ...}) = 0 <0.000008>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0p \0\000"..., 4096) = 4096 <0.000037>
+ old_mmap(NULL, 36384, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x4010d000 <0.000017>
+ mprotect(0x40115000, 3616, PROT_NONE) = 0 <0.000012>
+ old_mmap(0x40115000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x7000) = 0x40115000 <0.000014>
+ close(4)      = 0 <0.000006>
+ munmap(0x40015000, 12210) = 0 <0.000018>
+ open("/etc/host.conf", O_RDONLY) = 4 <0.000029>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=26, ...}) = 0 <0.000009>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000015>
+ read(4, "order hosts,bind\nmulti on\n", 4096) = 26 <0.000032>
+ read(4, "", 4096) = 0 <0.000009>
+ close(4)      = 0 <0.000007>
+ munmap(0x40015000, 4096) = 0 <0.000012>
+ open("/etc/hosts", O_RDONLY) = 4 <0.000021>
+ fcntl(4, F_GETFD) = 0 <0.000008>
+ fcntl(4, F_SETFD, FD_CLOEXEC) = 0 <0.000005>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=44, ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000014>
+ read(4, "127.0.0.1\t\t localhost.localdomai"..., 4096) = 44 <0.000028>
+ read(4, "", 4096) = 0 <0.000008>
+ close(4)      = 0 <0.000008>
+ munmap(0x40015000, 4096) = 0 <0.000010>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000022>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000007>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000015>
+ close(4)      = 0 <0.000007>
+ open("/lib/libnss_nisplus.so.2", O_RDONLY) = 4 <0.000024>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=252234, ...}) = 0 <0.000007>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\20\37\0"..., 4096) = 4096 <0.000034>
+ old_mmap(NULL, 41972, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40116000 <0.000015>
+ mprotect(0x4011f000, 5108, PROT_NONE) = 0 <0.000013>
+ old_mmap(0x4011f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x8000) = 0x4011f000 <0.000014>
+ close(4)      = 0 <0.000008>
+ open("/lib/libnsl.so.1", O_RDONLY) = 4 <0.000030>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=370141, ...}) = 0 <0.000008>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\20?\0\000"..., 4096) = 4096 <0.000034>
+ brk(0x804f000) = 0x804f000 <0.000013>
+ old_mmap(NULL, 88104, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40121000 <0.000012>
+ mprotect(0x40133000, 14376, PROT_NONE) = 0 <0.000012>
+ old_mmap(0x40133000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x11000) = 0x40133000 <0.000012>
+ old_mmap(0x40135000, 6184, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x40135000 <0.000012>
+ close(4)      = 0 <0.000007>
+ munmap(0x40015000, 12210) = 0 <0.000019>
+ uname({sys="Linux", node="localhost.localdomain", ...}) = 0 <0.000011>
+ open("/var/nis/NIS_COLD_START", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000032>
+ open("/var/nis/NIS_COLD_START", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000020>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000020>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000009>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000017>
+ close(4)      = 0 <0.000007>
+ open("/lib/libnss_nis.so.2", O_RDONLY) = 4 <0.000023>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=255963, ...}) = 0 <0.000007>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0`\37\0\000"..., 4096) = 4096 <0.000038>
+ old_mmap(NULL, 38488, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40137000 <0.000015>
+ mprotect(0x4013f000, 5720, PROT_NONE) = 0 <0.000012>
+ old_mmap(0x4013f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x7000) = 0x4013f000 <0.000015>
+ close(4)      = 0 <0.000007>
+ munmap(0x40015000, 12210) = 0 <0.000017>
+ uname({sys="Linux", node="localhost.localdomain", ...}) = 0 <0.000012>
+ open("/etc/ld.so.cache", O_RDONLY) = 4 <0.000030>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=12210, ...}) = 0 <0.000009>
+ old_mmap(NULL, 12210, PROT_READ, MAP_PRIVATE, 4, 0) = 0x40015000 <0.000017>
+ close(4)      = 0 <0.000007>
+ open("/lib/libnss_dns.so.2", O_RDONLY) = 4 <0.000023>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=67580, ...}) = 0 <0.000007>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\300\r\0"..., 4096) = 4096 <0.000035>
+ old_mmap(NULL, 15088, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40141000 <0.000014>
+ mprotect(0x40144000, 2800, PROT_NONE) = 0 <0.000012>
+ old_mmap(0x40144000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0x2000) = 0x40144000 <0.000017>
+ close(4)      = 0 <0.000007>
+ open("/lib/libresolv.so.2", O_RDONLY) = 4 <0.000029>
+ fstat(4, {st_mode=S_IFREG|0755, st_size=169720, ...}) = 0 <0.000009>
+ read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340&\0"..., 4096) = 4096 <0.000036>
+ old_mmap(NULL, 60956, PROT_READ|PROT_EXEC, MAP_PRIVATE, 4, 0) = 0x40145000 <0.000015>
+ mprotect(0x40151000, 11804, PROT_NONE) = 0 <0.000009>
+ old_mmap(0x40151000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 4, 0xb000) = 0x40151000 <0.000013>
+ old_mmap(0x40152000, 7708, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x40152000 <0.000012>
+ close(4)      = 0 <0.000008>
+ munmap(0x40015000, 12210) = 0 <0.000014>
+ socket(PF_INET, SOCK_DGRAM, IPPROTO_IP) = 4 <0.000028>
+ connect(4, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, 16) = 0 <0.000046>
+ send(4, "\330\6\1\0\0\1\0\0\0\0\0\0\3www\2cs\3dal\2ca\0\0\1\0\1"..., 31, 0) = 31 <0.000069>
+ time(NULL)    = 1142548308 <0.000006>
+ poll([{fd=4, events=POLLIN, revents=POLLIN}], 1, 5000) = 1 <0.003766>
+ recvfrom(4, "\330\6\205\200\0\1\0\2\0\3\0\3\3www\2cs\3dal\2ca\0\0\1"..., 1024, 0, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, [16]) = 173 <0.000025>
+ close(4)      = 0 <0.000028>
+ brk(0x8050000) = 0x8050000 <0.000016>
+ getpid()      = 736 <0.000007>
+ open("/etc/protocols", O_RDONLY) = 4 <0.000030>
+ fcntl(4, F_GETFD) = 0 <0.000007>
+ fcntl(4, F_SETFD, FD_CLOEXEC) = 0 <0.000006>
+ fstat(4, {st_mode=S_IFREG|0644, st_size=1567, ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000018>
+ read(4, "# /etc/protocols:\n# $Id: protoco"..., 4096) = 1567 <0.000046>
+ close(4)      = 0 <0.000009>
+ munmap(0x40015000, 4096) = 0 <0.000013>
+ socket(PF_INET, SOCK_RAW, IPPROTO_ICMP) = 4 <0.000032>
+ socket(PF_INET, SOCK_RAW, IPPROTO_RAW) = 5 <0.000014>
+ getuid()      = 0 <0.000005>
+ setuid(0)     = 0 <0.000007>
+ setsockopt(5, SOL_SOCKET, SO_SNDBUF, [38], 4) = 0 <0.000012>
+ setsockopt(5, SOL_IP, IP_HDRINCL, [1], 4) = 0 <0.000009>
+ socket(PF_INET, SOCK_DGRAM, IPPROTO_IP) = 6 <0.000015>
+ ioctl(6, SIOCGIFCONF, 0xbffff600) = 0 <0.000017>
+ ioctl(6, SIOCGIFFLAGS, 0xbffff61c) = 0 <0.000010>
+ ioctl(6, SIOCGIFFLAGS, 0xbffff61c) = 0 <0.000007>
+ ioctl(6, SIOCGIFADDR, 0xbffff61c) = 0 <0.000009>
+ close(6)      = 0 <0.000017>
+ open("/proc/net/route", O_RDONLY) = 6 <0.000045>
+ fstat(6, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000018>
+ read(6, "Iface\tDestination\tGateway \tFlags"..., 1024) = 512 <0.000065>
+ read(6, "", 1024) = 0 <0.000011>
+ close(6)      = 0 <0.000011>
+ munmap(0x40015000, 4096) = 0 <0.000015>
+ write(2, "traceroute to Rhine.cs.dal.ca (1"..., 46) = 46 <0.000058>
+ write(2, ", 30 hops max, 38 byte packets\n", 31) = 31 <0.000059>
+ fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(4, 1), ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000 <0.000016>
+ ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0 <0.000015>
+ gettimeofday({1142548308, 99682}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\341\0\0\1\21\235\237\254\24\2\365\201\255B\266"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("129.173.66.182")}}, 16) = 38 <0.000092>
+ gettimeofday({1142548308, 99957}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999725}) = 1 (in [4], left {4, 990000}) <0.001143>
+ recvfrom(4, "E\300\0B7\376\0\0@\1\344\336\254\24\2\1\254\24\2\365\v"..., 512, 0, {sin_family=AF_INET, sin_port=htons(4288), sin_addr=inet_addr("172.20.2.1")}}, [16]) = 66 <0.000020>
+ gettimeofday({1142548308, 101480}, {240, 0}) = 0 <0.000006>
+ uname({sys="Linux", node="localhost.localdomain", ...}) = 0 <0.000010>
+ socket(PF_UNIX, SOCK_STREAM, 0) = 6 <0.000028>
+ connect(6, {sin_family=AF_UNIX, path="                                                                                       /var/run/.nscd_socket"}, 110) = -1 ECONNREFUSED (Connection refused) <0.000026>
+ close(6)      = 0 <0.000034>
+ open("/etc/hosts", O_RDONLY) = 6 <0.000024>
+ fcntl(6, F_GETFD) = 0 <0.000006>
+ fcntl(6, F_SETFD, FD_CLOEXEC) = 0 <0.000005>
+ fstat(6, {st_mode=S_IFREG|0644, st_size=44, ...}) = 0 <0.000008>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40016000 <0.000017>
+ read(6, "127.0.0.1\t\t localhost.localdomai"..., 4096) = 44 <0.000035>
+ read(6, "", 4096) = 0 <0.000007>
+ close(6)      = 0 <0.000008>
+ munmap(0x40016000, 4096) = 0 <0.000015>
+ open("/var/nis/NIS_COLD_START", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000028>
+ uname({sys="Linux", node="localhost.localdomain", ...}) = 0 <0.000010>
+ socket(PF_INET, SOCK_DGRAM, IPPROTO_IP) = 6 <0.000027>
+ connect(6, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, 16) = 0 <0.000016>
+ send(6, "\330\7\1\0\0\1\0\0\0\0\0\0\0011\0012\00220\003172\7in-"..., 41, 0) = 41 <0.000066>
+ time(NULL)    = 1142548308 <0.000006>
+ poll([{fd=6, events=POLLIN, revents=POLLIN}], 1, 5000) = 1 <0.003159>
+ recvfrom(6, "\330\7\201\203\0\1\0\0\0\1\0\0\0011\0012\00220\003172\7"..., 1024, 0, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, [16]) = 118 <0.000016>
+ close(6)      = 0 <0.000019>
+ write(1, " 1  172.20.2.1 (172.20.2.1)  1.7"..., 37) = 37 <0.000052>
+ gettimeofday({1142548308, 107167}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\342\0\0\1\21\377\376\254\24\2\365\201\255B\266"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("129.173.66.182")}}, 16) = 38 <0.000058>
+ gettimeofday({1142548308, 107389}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999778}) = 1 (in [4], left {5, 0}) <0.001199>
+ recvfrom(4, "E\300\0B7\377\0\0@\1\344\335\254\24\2\1\254\24\2\365\v"..., 512, 0, {sin_family=AF_INET, sin_port=htons(4288), sin_addr=inet_addr("172.20.2.1")}}, [16]) = 66 <0.000017>
+ gettimeofday({1142548308, 108917}, {240, 0}) = 0 <0.000006>
+ write(1, "  1.750 ms", 10) = 10 <0.000032>
+ gettimeofday({1142548308, 109078}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\343\0\0\1\21\235\236\254\24\2\365\201\255B\266"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("129.173.66.182")}}, 16) = 38 <0.000047>
+ gettimeofday({1142548308, 109283}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999795}) = 1 (in [4], left {5, 0}) <0.001095>
+ recvfrom(4, "E\300\0B8\0\0\0@\1\344\334\254\24\2\1\254\24\2\365\v\0"..., 512, 0, {sin_family=AF_INET, sin_port=htons(4288), sin_addr=inet_addr("172.20.2.1")}}, [16]) = 66 <0.000014>
+ gettimeofday({1142548308, 110698}, {240, 0}) = 0 <0.000006>
+ write(1, "  1.620 ms", 10) = 10 <0.000032>
+ write(1, "\n", 1) = 1 <0.000046>
+ gettimeofday({1142548308, 110987}, {240, 0}) = 0 <0.000007>
+ sendto(5, "E\0&\0\202\344\0\0\2\21\376\375\254\24\2\365\201\255B\266"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("129.173.66.182")}}, 16) = 38 <0.000038>
+ gettimeofday({1142548308, 111205}, {240, 0}) = 0 <0.000007>
+ select(5, [4], NULL, NULL, {4, 999782}) = 1 (in [4], left {5, 0}) <0.003190>
+ recvfrom(4, "E\0\0008)\200\0\0?\1\336\330\201\255B\266\254\24\2\365"..., 512, 0, {sin_family=AF_INET, sin_port=htons(33229), sin_addr=inet_addr("129.173.66.182")}}, [16]) = 56 <0.000016>
+ gettimeofday({1142548308, 114744}, {240, 0}) = 0 <0.000006>
+ socket(PF_UNIX, SOCK_STREAM, 0) = 6 <0.000026>
+ connect(6, {sin_family=AF_UNIX, path="                                                                                       /var/run/.nscd_socket"}, 110) = -1 ECONNREFUSED (Connection refused) <0.000025>
+ close(6)      = 0 <0.000033>
+ open("/etc/hosts", O_RDONLY) = 6 <0.000022>
+ fcntl(6, F_GETFD) = 0 <0.000008>
+ fcntl(6, F_SETFD, FD_CLOEXEC) = 0 <0.000006>
+ fstat(6, {st_mode=S_IFREG|0644, st_size=44, ...}) = 0 <0.000009>
+ old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40016000 <0.000017>
+ read(6, "127.0.0.1\t\t localhost.localdomai"..., 4096) = 44 <0.000035>
+ read(6, "", 4096) = 0 <0.000007>
+ close(6)      = 0 <0.000008>
+ munmap(0x40016000, 4096) = 0 <0.000016>
+ open("/var/nis/NIS_COLD_START", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000027>
+ uname({sys="Linux", node="localhost.localdomain", ...}) = 0 <0.000010>
+ socket(PF_INET, SOCK_DGRAM, IPPROTO_IP) = 6 <0.000029>
+ connect(6, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, 16) = 0 <0.000019>
+ send(6, "\330\10\1\0\0\1\0\0\0\0\0\0\003182\00266\003173\003129"..., 45, 0) = 45 <0.000044>
+ time(NULL)    = 1142548308 <0.000006>
+ poll([{fd=6, events=POLLIN, revents=POLLIN}], 1, 5000) = 1 <0.003408>
+ recvfrom(6, "\330\10\205\200\0\1\0\2\0\2\0\2\003182\00266\003173\003"..., 1024, 0, {sin_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("129.173.1.10")}}, [16]) = 160 <0.000017>
+ close(6)      = 0 <0.000018>
+ write(1, " 2  Rhine.cs.Dal.Ca (129.173.66."..., 46) = 46 <0.000053>
+ gettimeofday({1142548308, 120378}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\345\0\0\2\21\235\235\254\24\2\365\201\255B\266"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("129.173.66.182")}}, 16) = 38 <0.000037>
+ gettimeofday({1142548308, 120600}, {240, 0}) = 0 <0.000005>
+ select(5, [4], NULL, NULL, {4, 999778}) = 1 (in [4], left {4, 990000}) <0.002652>
+ recvfrom(4, "E\0\0008)\207\0\0?\1\336\321\201\255B\266\254\24\2\365"..., 512, 0, {sin_family=AF_INET, sin_port=htons(33229), sin_addr=inet_addr("129.173.66.182")}}, [16]) = 56 <0.000017>
+ gettimeofday({1142548308, 123577}, {240, 0}) = 0 <0.000006>
+ write(1, "  3.199 ms", 10) = 10 <0.000034>
+ gettimeofday({1142548308, 123742}, {240, 0}) = 0 <0.000006>
+ sendto(5, "E\0&\0\202\346\0\0\2\21\376\374\254\24\2\365\201\255B\266"..., 38, 0, {sin_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("129.173.66.182")}}, 16) = 38 <0.000035>
+ gettimeofday({1142548308, 123953}, {240, 0}) = 0 <0.000006>
+ select(5, [4], NULL, NULL, {4, 999789}) = 1 (in [4], left {5, 0}) <0.002685>
+ recvfrom(4, "E\0\0008)\214\0\0?\1\336\314\201\255B\266\254\24\2\365"..., 512, 0, {sin_family=AF_INET, sin_port=htons(33229), sin_addr=inet_addr("129.173.66.182")}}, [16]) = 56 <0.000014>
+ gettimeofday({1142548308, 126956}, {240, 0}) = 0 <0.000006>
+ write(1, "  3.214 ms", 10) = 10 <0.000032>
+ write(1, "\n", 1) = 1 <0.000046>
+ munmap(0x40015000, 4096) = 0 <0.000018>
+ _exit(0)      = ?
