@@ -8,14 +8,14 @@ def ngram_sequence(data, window_size):
     grams = []
 
     for idx in range((len(data) + 1 - window_size)):
-        grams.append(
-            [data[i] for i in range(idx, idx + window_size)])
+        grams.append([data[i] for i in range(idx, idx + window_size)])
 
     return grams
 
 def extract_calls_id(file_name):
     """
     Extrai a sequência de id nos arquivos .idx.
+    :return array of strings of numbers
     """
     with open(file_name, 'r') as input_data:
         r_data = input_data.read().split()
@@ -27,13 +27,13 @@ def output_gram(file_name, grams):
     """
     with open(file_name, 'w') as output:
         for idx in range(len(grams) - 1):
-            data = [str(value) for value in grams[idx]]
-            data = ",".join(data)
-            output.write(data + "\n")
+            # data = [str(value) for value in grams[idx]]
+            # data = ",".join(data)
+            output.write(grams[idx] + "\n")
 
-        data = [value for value in grams[-1]]
-        data = ",".join(data)
-        output.write(data)
+        # data = [value for value in grams[-1]]
+        # data = ",".join(data)
+        output.write(grams[-1])
 
 def syscall_id(syscall_file):
     """
@@ -67,7 +67,7 @@ def syscall_id(syscall_file):
             output.write(
                 calls[-1] + "," + str(id_calls[calls[-1]]))
 
-        return idx_file, list(range(max(id_calls.values()) + 1))
+        return idx_file, sorted(list(id_calls.values()))
 
 def reformat_input(file_name):
     file_id = file_name[:file_name.rfind('.')]

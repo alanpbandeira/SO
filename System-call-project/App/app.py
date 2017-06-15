@@ -53,7 +53,7 @@ class App(object):
         Finds a provided key in the data_base, if no key is provided the
         complete data_base is returned
         """
-        return self.data_base[key[0]].get(key)
+        return self.data_base[key[0]].get(key.split(","))
 
     def gram_similarity(self, test_file):
         """docstring"""
@@ -65,12 +65,15 @@ class App(object):
             upper_b = len(test)
 
             for gram in test:
-                if self.data_base[gram[0]].get(gram):
+                gram = gram.split(",")
+
+                if gram[0] not in self.data_base.keys():
+                    misses += 1
+                elif self.data_base[gram[0]].get(gram):
                     continue
                 else:
                     misses += 1
 
             score = misses / upper_b
             perc = int(score * 100)
-
-            self.scores[len(gram[0])] = (score, perc)
+            self.scores[len(test[0].split(","))] = (score, perc)

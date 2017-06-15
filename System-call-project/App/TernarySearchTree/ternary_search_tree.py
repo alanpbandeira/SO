@@ -61,12 +61,11 @@ class TST(object):
             # Use the line below if you want to get only maximum depth keys
             # if not any([root.left_node, root.right_node, root.mid_node]):
             if root.value and depth == str_len:
-                print(depth, str_len)
             # if root.value:
             # if depth == str_len:
             #     print("here")
-                # results.append("".join(c_buffer[:depth+1]))
-                results.append("".join(c_buffer))
+                results.append(",".join(c_buffer[:depth+1]))
+                # results.append(",".join(c_buffer))
                 # print(results)
                 # print("".join(c_buffer[:depth+1]))
 
