@@ -20,13 +20,15 @@ class App(Frame):
         # string_label.pack(side="top")
 
         # Adding a textbox
-        self.input_data = ttk.Entry(self.master, width=20, textvariable=self.s_string)
+        self.input_data = ttk.Entry(
+            self.master, width=20, textvariable=self.s_string)
         self.input_data.focus()
         self.input_data.grid(column=1, row=0)
         # self.input_data.pack(side="top")
 
         # Adding a Button
-        self.action = ttk.Button(self.master, text="Search", command=self.string_search)
+        self.action = ttk.Button(
+            self.master, text="Search", command=self.string_search)
         self.action.grid(column=2, row=0)
         # self.action.pack(side="top")
 
@@ -47,7 +49,6 @@ class App(Frame):
         results = []
 
         if stg == '':
-            print(stg)
             return
 
         print('search start')
