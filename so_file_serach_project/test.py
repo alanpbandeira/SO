@@ -1,9 +1,12 @@
-import PyPDF2
+import subprocess
 
-fhand= open("SO questões arquivo.pdf", 'rb')
+subprocess.run(["pdf2txt.py", "-o", "output", "/home/alan/Workspace/Python/SO/so_file_serach_project/6-Strings-Pesquisa-Digital.pdf"])
+# print(r'cara\n')
 
-pdfreader = PyPDF2.PdfFileReader(fhand)
+with open("output", 'r') as fhand:
+    # data = fhand.read()
+    # for x in data:
+        # print(x)
 
-page = pdfreader.getPage(0)
-
-print(page.extractText())
+    for line in fhand:
+        print(line)

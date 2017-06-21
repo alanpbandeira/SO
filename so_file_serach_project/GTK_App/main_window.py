@@ -1,6 +1,7 @@
 import gi
 import os
 import platform
+import subprocess
 import numpy as np
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
@@ -66,11 +67,12 @@ class MainWindow(Gtk.Window):
             print("No pdf file found.")
             return
 
+        results = substring_search(pdf_files, s_str_one, s_str_two)
 
 
         # print(self.entry_one.get_properties("text")[0])
 
-    def show_serach_results(slef, data):
+    def show_search_results(slef, data):
         """
         :param data: List of tuples
         """
@@ -111,7 +113,9 @@ class MainWindow(Gtk.Window):
         ocrr_data = dict.fromkeys(file_data, np.zeros(2)))
 
         for path in file_data:
-            with open(path, 'r') as fhand:
+            subprocess.run(["pdf2txt.py", "-o", "output", path])
+
+            with open("output", 'r') as fhand:
                 if platform.system() == 'Windows':
                     file_name = path[path.rfind("\\"):path.rfind(".")+1]
                 else:
@@ -122,6 +126,7 @@ class MainWindow(Gtk.Window):
                         ocrr_data[path][0]+=1
                         ocrr_data[path][1]+=1
 
+                    for line in 
 
 
                 if sub_two is not "":
