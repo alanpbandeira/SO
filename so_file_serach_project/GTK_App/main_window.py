@@ -1,5 +1,6 @@
 import gi
 import os
+import re
 import platform
 import subprocess
 import numpy as np
@@ -51,6 +52,8 @@ class MainWindow(Gtk.Window):
         # Vmox row two
         self.row_two = Gtk.Box(
             orientation=Gtk.Orientation.HORIZONTAL, spacing=0)
+        self.scroll_area = Gtk.ScrolledWindow()
+        self.row_two.pack_start(self.scroll_area, True, True, 0)
         self.base_layout.pack_start(self.row_two, True, True, 0)
 
 
@@ -60,36 +63,50 @@ class MainWindow(Gtk.Window):
 
         if (s_str_one == "" and s_str_two == ""):
             return
+        elif s_str_one == "":
+            s_str_one = None
+        elif s_str_two == "":
+            s_str_two = None
+        else:
+            pass
 
-        pdf_files = pdf_search()
+        pdf_files = self.pdf_search()
 
         if not pdf_files:
             print("No pdf file found.")
             return
 
-        results = substring_search(pdf_files, s_str_one, s_str_two)
+        results = self.substring_search(pdf_files, [s_str_one, s_str_two])
 
+        data = []
 
-        # print(self.entry_one.get_properties("text")[0])
+        for item in results:
+            data.append((int(results[item][0]), int(results[item][1]), item))
 
-    def show_search_results(slef, data):
+        data = sorted(data)
+
+        data = [d_item[::-1] for d_item in sorted(data)][::-1]
+        self.show_search_results(data)
+
+    def show_search_results(self, data):
         """
         :param data: List of tuples
         """
-        data_list_store = Gtk.ListStore(str, int, str)
+
+        data_list_store = Gtk.ListStore(str, int, int)
         for item in data:
             data_list_store.append(list(item))
 
         data_tree_view = Gtk.TreeView(data_list_store)
-        column_names = ["File/Directory", "Ocurrences", "Score"]
+        column_names = ["File", "Ocurrences", "Score"]
+
         for i, col_title in enumerate(column_names):
-
-            rederer = Gtk.CellRendererText()
+            renderer = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(col_title, renderer, text=i)
-            data_tree_view.append_collumn(column)
+            data_tree_view.append_column(column)
 
-        self.row_two.pack_start(data_tree_view, True, True, 0)
-        pass
+        self.scroll_area.add(data_tree_view)
+        self.show_all()
 
     @staticmethod
     def pdf_search():
@@ -98,38 +115,50 @@ class MainWindow(Gtk.Window):
         """
         results = []
 
-        for dirname, dirnames, filenames in os.walk('/'):
+        for dirname, dirnames, filenames in os.walk('/home/alan/Downloads/test'):
             for filename in filenames:
                 # print(os.path.join(dirname, filename))
                 path = os.path.join(dirname, filename)
                 if path[path.rfind("."):].lower() == ".pdf":
                     results.append(path)
-
         return results
 
     @staticmethod
-    def substring_search(file_data, sub_one, sub_two):
+    def substring_search(file_data, search_s):
         """docstring"""
-        ocrr_data = dict.fromkeys(file_data, np.zeros(2)))
+        ocrr_data = dict.fromkeys(file_data)
+        for item in ocrr_data:
+            ocrr_data[item] = np.zeros(2)
 
         for path in file_data:
-            subprocess.run(["pdf2txt.py", "-o", "output", path])
+            if platform.system() == 'Windows':
+                file_name = path[path.rfind("\\")+1:path.rfind(".")]
+            else:
+                file_name = path[path.rfind("/")+1:path.rfind(".")]
 
-            with open("output", 'r') as fhand:
-                if platform.system() == 'Windows':
-                    file_name = path[path.rfind("\\"):path.rfind(".")+1]
-                else:
-                    file_name = path[path.rfind("/"):path.rfind(".")+1]
+            try:
+                subprocess.run(["pdf2txt.py", "-o", "output", path])
+            except:
+                continue
 
-                if sub_one is not "":
-                    if sub_one in file_name:
-                        ocrr_data[path][0]+=1
-                        ocrr_data[path][1]+=1
+            for sub_str in search_s:
+                with open("output", 'r') as fhand:
+                    pattern = re.compile(sub_str)
+                    chekced = False
+                    if sub_str is not None:
+                        if pattern.search(file_name.lower()):
+                            ocrr_data[path][0]+=1
+                            ocrr_data[path][1]+=1
+                            chekced = True
 
-                    for line in 
+                            try:
+                                for line in fhand:
+                                    if pattern.search(line):
+                                        ocrr_data[path][1] += 1
 
-
-                if sub_two is not "":
-                    if sub_two in file_name:
-                        ocrr_data[path][0]+=1
-                        ocrr_data[path][1]+=1
+                                        if not chekced:
+                                            ocrr_data[path][0] += 1
+                                            chekced = True
+                            except:
+                                pass
+        return ocrr_data
