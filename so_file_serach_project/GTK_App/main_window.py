@@ -143,8 +143,13 @@ class MainWindow(Gtk.Window):
 
             for sub_str in search_s:
                 with open("output", 'r') as fhand:
-                    pattern = re.compile(sub_str)
+                    try:
+                        pattern = re.compile(sub_str)
+                    except:
+                        continue
+
                     chekced = False
+
                     if sub_str is not None:
                         if pattern.search(file_name.lower()):
                             ocrr_data[path][0]+=1
