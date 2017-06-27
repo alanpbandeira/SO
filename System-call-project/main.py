@@ -5,11 +5,13 @@ import os
 
 my_app = None
 
+
 def clear_ui():
     try:
         os.system('clear')
     except:
         os.system('cls')
+
 
 def reformat():
     clear_ui()
@@ -21,6 +23,7 @@ def reformat():
     while input() is not "":
         continue
     menu()
+
 
 def query_gram():
     clear_ui()
@@ -38,6 +41,7 @@ def query_gram():
         continue
     menu()
 
+
 def init():
     log_import()
     my_app.run()
@@ -46,6 +50,7 @@ def init():
     while input() is not "":
         continue
     menu()
+
 
 def log_import():
     global my_app
@@ -58,6 +63,7 @@ def log_import():
 
     print("Log imported with success")
 
+
 def calc_score():
     clear_ui()
     test_file = "data/" + input("Enter the test file name:\n")
@@ -69,6 +75,7 @@ def calc_score():
     while input() is not "":
         continue
     menu()
+
 
 def save_data():
     clear_ui()
@@ -89,22 +96,35 @@ def save_data():
         continue
     menu()
 
+
+def local_ddisplacement():
+    """docstring"""
+    clear_ui()
+    window_size = int(input("Enter window size: "))
+    data_file = input("Enter test file name: ")
+
+    data = my_app.score_data_plot(window_size, data_file)
+
+    # TODO
+    # Call pyplot and soutput the results.
+
+
 def menu():
     global my_app
 
     clear_ui()
 
     print(
-    """| ** Syscall Analyser ** |
+        """| ** Syscall Analyser ** |
 
-    -> Select an Option:
-        1. Import Syscall Log
-        2. Inport ".strace" File
-        3. Consult DataBase
-        4. Output N-Gram Data
-        5. Calculate N-Gram Score
-        6. Clear Data
-        7. Exit"""
+        -> Select an Option:
+            1. Import Syscall Log
+            2. Inport ".strace" File
+            3. Consult DataBase
+            4. Output N-Gram Data
+            5. Calculate N-Gram Score
+            6. Clear Data
+            7. Exit"""
     )
 
     opt = input()

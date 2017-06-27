@@ -1,5 +1,6 @@
-import queue
+# import queue
 from .node import Node
+
 
 class TST(object):
     """docstring for TST."""
@@ -14,7 +15,7 @@ class TST(object):
 
         c = key[index]
 
-        if node == None:
+        if node is None:
             node = Node(c)
 
         if int(c) < int(node.character):
@@ -31,14 +32,14 @@ class TST(object):
     def get(self, key):
         node = self.get_item(self.root, key, 0)
 
-        if node == None:
+        if node is None:
             return None
 
         return node.value
 
     def get_item(self, node, key, index):
 
-        if node == None:
+        if node is None:
             return None
 
         c = key[index]

@@ -1,8 +1,9 @@
 import glob
 
+
 def ngram_sequence(data, window_size):
     """
-    Gera todas as sequências de ngramn a partir dos dados das syscall.
+    Gera todas as sequencias de ngramn a partir dos dados das syscall.
     @return:
     """
     grams = []
@@ -12,14 +13,16 @@ def ngram_sequence(data, window_size):
 
     return grams
 
+
 def extract_calls_id(file_name):
     """
-    Extrai a sequência de id nos arquivos .idx.
+    Extrai a sequencia de id nos arquivos .idx.
     :return array of strings of numbers
     """
     with open(file_name, 'r') as input_data:
         r_data = input_data.read().split()
         return ([d.split(',')[1] for d in r_data])
+
 
 def output_gram(file_name, grams):
     """
@@ -35,10 +38,11 @@ def output_gram(file_name, grams):
         # data = ",".join(data)
         output.write(grams[-1])
 
+
 def syscall_id(syscall_file):
     """
     Gera os arquivos csv .idx contendo cada syscall e seu id a partir
-    dos arquivos .log presentes no diretório de trabalho.
+    dos arquivos .log presentes no diretorio de trabalho.
     """
 
     with open(syscall_file, 'r') as fhand:
@@ -69,6 +73,7 @@ def syscall_id(syscall_file):
 
         return idx_file, sorted(list(id_calls.values()))
 
+
 def reformat_input(file_name):
     file_id = file_name[:file_name.rfind('.')]
 
@@ -80,7 +85,8 @@ def reformat_input(file_name):
 
                 log.write(line)
 
-def ngram_score_ffile(base_model, test_model):
+
+def ngram_score_file(base_model, test_model):
     """
     Calcula o score de similaridade entre ngrams ente o
     arquivo de teste e o modelo base.
@@ -103,21 +109,3 @@ def ngram_score_ffile(base_model, test_model):
                     count +=1
 
             return count / upper_b
-
-if __name__ == "__main__":
-    # Gera o arquivo com cada syscall e seu id
-    syscall_id()
-
-    # Extrai somente os ids do arquivo de syscall para gerar os ngrams
-    call_id = extract_calls_id('data/ls_syscall.idx')
-
-    # Gera os ngrams com uma janela de tamanho 10
-    grams = ngram_sequence(call_id, 10)
-
-    # Gera um arquivo em estilo csv contendo todos os ngrams
-    output_gram('data/ls_syscall', grams)
-
-    # Imprime o valor do método ngram_score que determina o escore
-    # da diferença de ngrams entre dois arquivos .gram fornecidos
-    print(
-        "Score: " + str(ngram_score('data/ls_syscall.gram', 'data/test.gram')))

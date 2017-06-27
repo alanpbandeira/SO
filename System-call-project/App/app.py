@@ -1,6 +1,8 @@
 from .TernarySearchTree.ternary_search_tree import TST
 from .SysCallProcessing.sc_descriptor import SCDescriptor
 from . import file_operations as fo
+from decimal import *
+
 
 class App(object):
     """docstring for App."""
@@ -77,3 +79,38 @@ class App(object):
             score = misses / upper_b
             perc = int(score * 100)
             self.scores[len(test[0].split(","))] = (score, perc)
+
+    def score_data_plot(self, set_size, test_file):
+        """docstring"""
+
+        with open(test_file) as f:
+            test_data = f.read().split()
+
+            upper_b = len(test_data)
+            selected_data = []
+            plot_data = {}
+
+            if upper_b <= set_size:
+                selected_data.append(test_data)
+            else:
+                for x in range((len(test_data) - set_size + 1)):
+                    selected_data.append(test_data[x:x+1+set_size])
+
+            for idx, data in enumerate(selected_data):
+                misses = 0
+
+                for gram in data:
+                    gram = gram.split(',')
+
+                    if gram[0] not in self.gram_base.keys():
+                        misses += 1
+                    elif self.gram_base[gram[0]].get(gram):
+                        continue
+                    else:
+                        misses += 1
+
+                score = misses / upper_b
+                perc = Decimal(score) * Decimal(10) ** (-2)
+                plot_data[i] = perc
+
+        return plot_data
