@@ -1,6 +1,8 @@
+import os
+import matplotlib.pyplot as plt
+
 from App.app import App
 from App import file_operations as fo
-import os
 
 
 my_app = None
@@ -97,16 +99,32 @@ def save_data():
     menu()
 
 
-def local_ddisplacement():
+def local_displacement():
     """docstring"""
     clear_ui()
     window_size = int(input("Enter window size: "))
-    data_file = input("Enter test file name: ")
+    data_file = "data/" + input("Enter test file name: ")
+
+    test_name = [
+        data_file[data_file.lfind("/")+1:data_file[data_file.rfind["."]]][4]
+        ]
+
+    test_id = [test_name[4]]
+    for i , l in enumerate(test_name):
+        
+
+    output = "plots/" +
 
     data = my_app.score_data_plot(window_size, data_file)
+    # print (data)
 
-    # TODO
-    # Call pyplot and soutput the results.
+    # Call pyplot and output the results.
+    plt.plot(list(data.keys()), list(data.values()))
+    plt.title()
+    plt.savefig( )
+    while input() is not "":
+        continue
+        menu()
 
 
 def menu():
@@ -123,8 +141,9 @@ def menu():
             3. Consult DataBase
             4. Output N-Gram Data
             5. Calculate N-Gram Score
-            6. Clear Data
-            7. Exit"""
+            6. Plot gram displacement
+            7. Clear Data
+            8. Exit"""
     )
 
     opt = input()
@@ -140,11 +159,13 @@ def menu():
     elif opt == '5':
         calc_score()
     elif opt == '6':
+        local_displacement()
+    elif opt == '7':
         my_app = None
         while input() is not "":
             continue
         menu()
-    elif opt == '7':
+    elif opt == '8':
         clear_ui()
         return
     else:

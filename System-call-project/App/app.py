@@ -4,6 +4,9 @@ from . import file_operations as fo
 from decimal import *
 
 
+getcontext().prec = 4
+
+
 class App(object):
     """docstring for App."""
     def __init__(self, sc_log, max_gram):
@@ -102,15 +105,17 @@ class App(object):
                 for gram in data:
                     gram = gram.split(',')
 
-                    if gram[0] not in self.gram_base.keys():
+                    if gram[0] not in self.data_base.keys():
                         misses += 1
-                    elif self.gram_base[gram[0]].get(gram):
+                    elif self.data_base[gram[0]].get(gram):
                         continue
                     else:
                         misses += 1
 
-                score = misses / upper_b
-                perc = Decimal(score) * Decimal(10) ** (-2)
-                plot_data[i] = perc
+                # score = misses / upper_b
+                score = Decimal(misses) / Decimal(upper_b)
+                perc = score * 100
+                # plot_data[idx] = score
+                plot_data[idx] = perc
 
         return plot_data
