@@ -1,11 +1,13 @@
 import os
 import matplotlib.pyplot as plt
+import numpy as np
 
 from App.app import App
 from App import file_operations as fo
 
 
 my_app = None
+num_plots = 0
 
 
 def clear_ui():
@@ -101,30 +103,33 @@ def save_data():
 
 def local_displacement():
     """docstring"""
+    global num_plots
+
     clear_ui()
     window_size = int(input("Enter window size: "))
     data_file = "data/" + input("Enter test file name: ")
-
-    test_name = [
-        data_file[data_file.lfind("/")+1:data_file[data_file.rfind["."]]][4]
-        ]
-
-    test_id = [test_name[4]]
-    for i , l in enumerate(test_name):
-        
-
-    output = "plots/" +
+    plot_name = input("Enter plot name: ")
+    out_put = "plots/" + plot_name + ".png"
 
     data = my_app.score_data_plot(window_size, data_file)
-    # print (data)
 
+    # with open(out_put, 'w') as fhand:
     # Call pyplot and output the results.
+    num_plots += 1
+    plt.figure(num_plots)
     plt.plot(list(data.keys()), list(data.values()))
-    plt.title()
-    plt.savefig( )
+    plt.ylim(0.0, max(list(data.values()))+10)
+    plt.xlim(0.0, max(list(data.keys())))
+    plt.yticks(np.arange(0.0, 101.0, 5))
+    plt.xlabel("Window position")
+    plt.ylabel("Score (%)")
+    plt.title(plot_name)
+    plt.savefig(out_put)
+
+    print("Plot save successfully.\nPress enter to continue.")
     while input() is not "":
         continue
-        menu()
+    menu()
 
 
 def menu():
