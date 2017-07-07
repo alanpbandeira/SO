@@ -1,6 +1,7 @@
 import os
 import matplotlib.pyplot as plt
 import numpy as np
+from decimal import *
 
 from App.app import App
 from App import file_operations as fo
@@ -8,6 +9,7 @@ from App import file_operations as fo
 
 my_app = None
 num_plots = 0
+getcontext().prec = 2
 
 
 def clear_ui():
@@ -56,12 +58,17 @@ def init():
     menu()
 
 
-def log_import():
+def log_import(file_name=None):
     global my_app
 
     clear_ui()
-    file_name = input("Log File: ")
-    file_name = "data/" + file_name
+
+    if file_name is None:
+        file_name = input("Log File: ")
+        file_name = "data/" + file_name
+    else:
+        file_name = "online_base/" + file_name
+
     max_grams = int(input("Maximum Gram Size: "))
     my_app = App(file_name, max_grams)
 
@@ -113,18 +120,19 @@ def local_displacement():
 
     data = my_app.score_data_plot(window_size, data_file)
 
-    # with open(out_put, 'w') as fhand:
+    # print(max(list(data.values()))+10)
+    with open(out_put, 'w') as fhand:
     # Call pyplot and output the results.
-    num_plots += 1
-    plt.figure(num_plots)
-    plt.plot(list(data.keys()), list(data.values()))
-    plt.ylim(0.0, max(list(data.values()))+10)
-    plt.xlim(0.0, max(list(data.keys())))
-    plt.yticks(np.arange(0.0, 101.0, 5))
-    plt.xlabel("Window position")
-    plt.ylabel("Score (%)")
-    plt.title(plot_name)
-    plt.savefig(out_put)
+        num_plots += 1
+        plt.figure(num_plots)
+        plt.plot(list(data.keys()), list(data.values()))
+        # plt.ylim(0.0, float(max(list(data.values())))+10)
+        # plt.xlim(0.0, max(list(data.keys())))
+        # plt.yticks(np.arange(0.0, 101.0, 5))
+        plt.xlabel("Window position")
+        plt.ylabel("Score (%)")
+        plt.title(plot_name)
+        plt.savefig(out_put)
 
     print("Plot save successfully.\nPress enter to continue.")
     while input() is not "":
