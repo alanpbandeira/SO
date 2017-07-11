@@ -1,8 +1,11 @@
 import os
 import matplotlib.pyplot as plt
 import numpy as np
-from decimal import *
+import subprocess
+import os
 
+from threading import Thread
+from decimal import *
 from App.app import App
 from App import file_operations as fo
 
@@ -140,6 +143,40 @@ def local_displacement():
     menu()
 
 
+def app_monitor(pid):
+    out_dest = os.getcwd() + "/online_base/output.log"
+
+    try:
+        subprocess.run(["strace", ""])
+    except Exception as e:
+        print ("strace not found")
+
+
+
+def online_monitoring():
+    clear_ui()
+
+    app_name = input("Enter applicaiton name: ")
+
+    try:
+        app_pid = str(int(subprocess.check_output(["pidof", app_name])))
+    except:
+        print("""Invalid applicaiton name.
+                Press enter to return to the main menu.""")
+        while input() is not "":
+            continue
+        menu()
+
+    # TODO init monitoring thread
+    Thread(target=app_monitor, args=(app_pid))
+
+    while input("Enter 'quit' to exit monitoring mode") != 'quit':
+        continue
+
+    # TODO kill monitoring thread
+    menu()
+
+
 def menu():
     global my_app
 
@@ -155,8 +192,9 @@ def menu():
             4. Output N-Gram Data
             5. Calculate N-Gram Score
             6. Plot gram displacement
-            7. Clear Data
-            8. Exit"""
+            7. Online Monitoring
+            8. Clear Data
+            9. Exit"""
     )
 
     opt = input()
@@ -174,11 +212,13 @@ def menu():
     elif opt == '6':
         local_displacement()
     elif opt == '7':
+        online_monitoring()
+    elif opt == '8':
         my_app = None
         while input() is not "":
             continue
         menu()
-    elif opt == '8':
+    elif opt == '9':
         clear_ui()
         return
     else:
