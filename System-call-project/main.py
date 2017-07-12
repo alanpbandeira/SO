@@ -147,8 +147,8 @@ def app_monitor(pid):
     out_dest = os.getcwd() + "/online_base/output.log"
 
     try:
-        subprocess.run(["strace", ""])
-    except Exception as e:
+        subprocess.run(["strace", "-o", out_dest, "-p", pid])
+    except:
         print ("strace not found")
 
 
