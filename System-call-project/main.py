@@ -2,7 +2,7 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 import subprocess
-import os
+import time
 
 from threading import Thread
 from decimal import *
@@ -61,7 +61,7 @@ def init():
     menu()
 
 
-def log_import(file_name=None):
+def log_import(file_name=None, max_grams=None):
     global my_app
 
     clear_ui()
@@ -72,7 +72,9 @@ def log_import(file_name=None):
     else:
         file_name = "online_base/" + file_name
 
-    max_grams = int(input("Maximum Gram Size: "))
+    if max_grams is None:
+        max_grams = int(input("Maximum Gram Size: "))
+
     my_app = App(file_name, max_grams)
 
     print("Log imported with success")
@@ -91,9 +93,12 @@ def calc_score():
     menu()
 
 
-def save_data():
+def save_data(gram_size=None):
     clear_ui()
-    gram_size = int(input("Enter gram_size: "))
+
+    if gram_size is None:
+        gram_size = int(input("Enter gram_size: "))
+
     idx_file = my_app.descriptor.idx_file
     idx_file = idx_file[:idx_file.rfind('.')]
 
@@ -143,7 +148,7 @@ def local_displacement():
     menu()
 
 
-def app_monitor(pid):
+def app_monitor(pid, grams):
     out_dest = os.getcwd() + "/online_base/output.log"
 
     try:
@@ -151,12 +156,23 @@ def app_monitor(pid):
     except:
         print ("strace not found")
 
+    init_time = time.clock()
+
+    while True:
+        new_time = time.clock()
+
+        if new_time - init_time >= 1.0:
+            log_import(file_name='base.log', max_grams=grams)
+            my_app.run()
+            save_data()
+
 
 
 def online_monitoring():
     clear_ui()
 
     app_name = input("Enter applicaiton name: ")
+    max_grams = int(input("Enter max gram size: "))
 
     try:
         app_pid = str(int(subprocess.check_output(["pidof", app_name])))
@@ -168,7 +184,7 @@ def online_monitoring():
         menu()
 
     # TODO init monitoring thread
-    Thread(target=app_monitor, args=(app_pid))
+    Thread(target=app_monitor, args=(app_pid, max_grams))
 
     while input("Enter 'quit' to exit monitoring mode") != 'quit':
         continue
