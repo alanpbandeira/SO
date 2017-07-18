@@ -33,7 +33,7 @@ class App(object):
             for gram in grams:
                 self.data_base[gram[0]].put(gram, len(gram))
 
-        print ("DB filled.")
+        # print ("DB filled.")
 
     def init_db(self, call_ones):
         """
@@ -45,7 +45,7 @@ class App(object):
                 self.data_base[str(x)] = TST()
                 self.data_base[str(x)].put(str(x), True)
 
-        print ("Syscall data base initialized.")
+        # print ("Syscall data base initialized.")
 
     def instace_query(self, root, gram_ssize):
         """

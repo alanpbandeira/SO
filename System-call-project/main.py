@@ -4,7 +4,7 @@ import numpy as np
 import subprocess
 import time
 
-from threading import Thread
+from threading import Thread, Event
 from decimal import *
 from App.app import App
 from App import file_operations as fo
@@ -67,53 +67,60 @@ def log_import(file_name=None, max_grams=None):
     clear_ui()
 
     if file_name is None:
-        file_name = input("Log File: ")
-        file_name = "data/" + file_name
+        input_file = input("Log File: ")
+        input_file = "data/" + input_file
     else:
-        file_name = "online_base/" + file_name
+        input_file = "online_base/" + file_name
 
     if max_grams is None:
         max_grams = int(input("Maximum Gram Size: "))
 
-    my_app = App(file_name, max_grams)
+    my_app = App(input_file, max_grams)
 
-    print("Log imported with success")
+    if file_name is None:
+        print("Log imported with success")
 
 
-def calc_score():
+def calc_score(file_name=None, gram_len=None):
     clear_ui()
-    test_file = "data/" + input("Enter the test file name:\n")
+    if file_name is None:
+        test_file = "data/" + input("Enter the test file name:\n")
+    else:
+        test_file = "online_base/" + file_name
+
     my_app.gram_similarity(test_file)
-    print(my_app.scores)
+    print("current score: " + str(my_app.scores[gram_len]))
     # print("Similarity Score: ", fo.ngram_score(base_file, test_file))
 
-    print("\nPress any button to return")
-    while input() is not "":
-        continue
-    menu()
+    if file_name is None:
+        print("\nPress any button to return")
+        while input() is not "":
+            continue
+        menu()
 
 
 def save_data(gram_size=None):
     clear_ui()
 
     if gram_size is None:
-        gram_size = int(input("Enter gram_size: "))
+        gram_len = int(input("Enter gram_len: "))
 
     idx_file = my_app.descriptor.idx_file
     idx_file = idx_file[:idx_file.rfind('.')]
 
     grams = []
     for tree in my_app.data_base.values():
-        grams += tree.traverse(gram_size-1, my_app.max_gram)
+        grams += tree.traverse(gram_len-1, my_app.max_gram)
 
-    file_name = idx_file + "_logbase_" + str(gram_size) + ".gram"
+    file_name = idx_file + "_logbase_" + str(gram_len) + ".gram"
 
     fo.output_gram(file_name, grams)
 
-    print("Data save with success.\nPress enter to continue.")
-    while input() is not "":
-        continue
-    menu()
+    if gram_size is None:
+        print("Data save with success.\nPress enter to continue.")
+        while input() is not "":
+            continue
+        menu()
 
 
 def local_displacement():
@@ -148,7 +155,8 @@ def local_displacement():
     menu()
 
 
-def app_monitor(pid, grams):
+def app_monitor(pid, grams, stopper):
+    global my_app
     out_dest = os.getcwd() + "/online_base/output.log"
 
     try:
@@ -158,15 +166,25 @@ def app_monitor(pid, grams):
 
     init_time = time.clock()
 
-    while True:
+    while not stopper.is_set():
         new_time = time.clock()
 
+        print(new_time)
+
         if new_time - init_time >= 1.0:
-            log_import(file_name='base.log', max_grams=grams)
+            log_import(file_name='output.log', max_grams=grams)
             my_app.run()
-            save_data()
+            save_data(gram_size=grams)
+            my_app = None
+            log_import(file_name='standart_base.log', max_grams=grams)
+            my_app.run()
+            gram_file = "output_logbase_" + str(grams) + ".gram"
+            calc_score(file_name=gram_file, gram_len=grams)
+            my_app = None
+            init_time = new_time
 
-
+    k_pid = str(int(subprocess.check_output(["pidof", "strace"])))
+    subprocess.run(["kill", k_pid])
 
 def online_monitoring():
     clear_ui()
@@ -177,21 +195,27 @@ def online_monitoring():
     try:
         app_pid = str(int(subprocess.check_output(["pidof", app_name])))
     except:
-        print("""Invalid applicaiton name.
-                Press enter to return to the main menu.""")
+        print(
+        "Invalid applicaiton name.\nPress enter to return to the main menu.")
         while input() is not "":
             continue
         menu()
 
-    # TODO init monitoring thread
-    Thread(target=app_monitor, args=(app_pid, max_grams))
+    monitor_stopper = Event()
+    m_thread = Thread(
+        target=app_monitor,
+        args=(app_pid, max_grams, monitor_stopper),
+        daemon=True).start()
 
-    while input("Enter 'quit' to exit monitoring mode") != 'quit':
+    while input("Enter 'quit' to exit monitoring mode: ") != 'quit':
         continue
 
-    # TODO kill monitoring thread
-    menu()
+    monitor_stopper.set()
 
+    print("Finished monitoring.\nPress enter to continue.")
+    while input() is not "":
+        continue
+    menu()
 
 def menu():
     global my_app
